@@ -1,0 +1,18 @@
+{
+  "images" : [
+    {
+      "idiom" : "mac",
+      "filename" : "gog_offline_installer@1x.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "mac",
+      "filename" : "gog_offline_installer@2x.png",
+      "scale" : "2x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}

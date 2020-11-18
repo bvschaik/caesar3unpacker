@@ -11,6 +11,21 @@
 		A6B10A262563B10A00D34DA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6B10A252563B10A00D34DA7 /* Assets.xcassets */; };
 		A6B10A292563B10A00D34DA7 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6B10A272563B10A00D34DA7 /* MainMenu.xib */; };
 		A6B10A2C2563B10A00D34DA7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B10A2B2563B10A00D34DA7 /* main.m */; };
+		A6B10A392563B21300D34DA7 /* ChooseSourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B10A372563B21300D34DA7 /* ChooseSourceViewController.m */; };
+		A6B10A3A2563B21300D34DA7 /* ChooseSourceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6B10A382563B21300D34DA7 /* ChooseSourceViewController.xib */; };
+		A6B10A3E2563B32F00D34DA7 /* GogSourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B10A3C2563B32F00D34DA7 /* GogSourceViewController.m */; };
+		A6B10A3F2563B32F00D34DA7 /* GogSourceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6B10A3D2563B32F00D34DA7 /* GogSourceViewController.xib */; };
+		A6B10A432563B33E00D34DA7 /* SteamSourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B10A412563B33E00D34DA7 /* SteamSourceViewController.m */; };
+		A6B10A442563B33E00D34DA7 /* SteamSourceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6B10A422563B33E00D34DA7 /* SteamSourceViewController.xib */; };
+		A6B10A482563B34D00D34DA7 /* CdromSourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B10A462563B34D00D34DA7 /* CdromSourceViewController.m */; };
+		A6B10A492563B34D00D34DA7 /* CdromSourceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6B10A472563B34D00D34DA7 /* CdromSourceViewController.xib */; };
+		A6B10A4D2563B36C00D34DA7 /* TargetDirViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B10A4B2563B36C00D34DA7 /* TargetDirViewController.m */; };
+		A6B10A4E2563B36C00D34DA7 /* TargetDirViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6B10A4C2563B36C00D34DA7 /* TargetDirViewController.xib */; };
+		A6B10A522563B38700D34DA7 /* ExtractingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B10A502563B38700D34DA7 /* ExtractingViewController.m */; };
+		A6B10A532563B38700D34DA7 /* ExtractingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6B10A512563B38700D34DA7 /* ExtractingViewController.xib */; };
+		A6B10A582563ED3F00D34DA7 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B10A572563ED3F00D34DA7 /* AppController.m */; };
+		A6B10A5E25640C9600D34DA7 /* WizardState.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B10A5D25640C9600D34DA7 /* WizardState.m */; };
+		A6B10A602564149C00D34DA7 /* WizardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B10A5F2564149B00D34DA7 /* WizardViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +37,30 @@
 		A6B10A2A2563B10A00D34DA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6B10A2B2563B10A00D34DA7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A6B10A2D2563B10A00D34DA7 /* Caesar3Unpacker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Caesar3Unpacker.entitlements; sourceTree = "<group>"; };
+		A6B10A362563B21300D34DA7 /* ChooseSourceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChooseSourceViewController.h; sourceTree = "<group>"; };
+		A6B10A372563B21300D34DA7 /* ChooseSourceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChooseSourceViewController.m; sourceTree = "<group>"; };
+		A6B10A382563B21300D34DA7 /* ChooseSourceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseSourceViewController.xib; sourceTree = "<group>"; };
+		A6B10A3B2563B32F00D34DA7 /* GogSourceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GogSourceViewController.h; sourceTree = "<group>"; };
+		A6B10A3C2563B32F00D34DA7 /* GogSourceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GogSourceViewController.m; sourceTree = "<group>"; };
+		A6B10A3D2563B32F00D34DA7 /* GogSourceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GogSourceViewController.xib; sourceTree = "<group>"; };
+		A6B10A402563B33E00D34DA7 /* SteamSourceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SteamSourceViewController.h; sourceTree = "<group>"; };
+		A6B10A412563B33E00D34DA7 /* SteamSourceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SteamSourceViewController.m; sourceTree = "<group>"; };
+		A6B10A422563B33E00D34DA7 /* SteamSourceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SteamSourceViewController.xib; sourceTree = "<group>"; };
+		A6B10A452563B34D00D34DA7 /* CdromSourceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CdromSourceViewController.h; sourceTree = "<group>"; };
+		A6B10A462563B34D00D34DA7 /* CdromSourceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CdromSourceViewController.m; sourceTree = "<group>"; };
+		A6B10A472563B34D00D34DA7 /* CdromSourceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CdromSourceViewController.xib; sourceTree = "<group>"; };
+		A6B10A4A2563B36C00D34DA7 /* TargetDirViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TargetDirViewController.h; sourceTree = "<group>"; };
+		A6B10A4B2563B36C00D34DA7 /* TargetDirViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TargetDirViewController.m; sourceTree = "<group>"; };
+		A6B10A4C2563B36C00D34DA7 /* TargetDirViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TargetDirViewController.xib; sourceTree = "<group>"; };
+		A6B10A4F2563B38700D34DA7 /* ExtractingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtractingViewController.h; sourceTree = "<group>"; };
+		A6B10A502563B38700D34DA7 /* ExtractingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtractingViewController.m; sourceTree = "<group>"; };
+		A6B10A512563B38700D34DA7 /* ExtractingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExtractingViewController.xib; sourceTree = "<group>"; };
+		A6B10A562563ED3F00D34DA7 /* AppController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
+		A6B10A572563ED3F00D34DA7 /* AppController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
+		A6B10A592563EE0700D34DA7 /* WizardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WizardViewController.h; sourceTree = "<group>"; };
+		A6B10A5C25640C9600D34DA7 /* WizardState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WizardState.h; sourceTree = "<group>"; };
+		A6B10A5D25640C9600D34DA7 /* WizardState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WizardState.m; sourceTree = "<group>"; };
+		A6B10A5F2564149B00D34DA7 /* WizardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WizardViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +93,7 @@
 		A6B10A212563B10800D34DA7 /* Caesar3Unpacker */ = {
 			isa = PBXGroup;
 			children = (
+				A6B10A6225650CFE00D34DA7 /* unshield */,
 				A6B10A222563B10800D34DA7 /* AppDelegate.h */,
 				A6B10A232563B10800D34DA7 /* AppDelegate.m */,
 				A6B10A252563B10A00D34DA7 /* Assets.xcassets */,
@@ -61,8 +101,39 @@
 				A6B10A2A2563B10A00D34DA7 /* Info.plist */,
 				A6B10A2B2563B10A00D34DA7 /* main.m */,
 				A6B10A2D2563B10A00D34DA7 /* Caesar3Unpacker.entitlements */,
+				A6B10A362563B21300D34DA7 /* ChooseSourceViewController.h */,
+				A6B10A372563B21300D34DA7 /* ChooseSourceViewController.m */,
+				A6B10A382563B21300D34DA7 /* ChooseSourceViewController.xib */,
+				A6B10A3B2563B32F00D34DA7 /* GogSourceViewController.h */,
+				A6B10A3C2563B32F00D34DA7 /* GogSourceViewController.m */,
+				A6B10A3D2563B32F00D34DA7 /* GogSourceViewController.xib */,
+				A6B10A402563B33E00D34DA7 /* SteamSourceViewController.h */,
+				A6B10A412563B33E00D34DA7 /* SteamSourceViewController.m */,
+				A6B10A422563B33E00D34DA7 /* SteamSourceViewController.xib */,
+				A6B10A452563B34D00D34DA7 /* CdromSourceViewController.h */,
+				A6B10A462563B34D00D34DA7 /* CdromSourceViewController.m */,
+				A6B10A472563B34D00D34DA7 /* CdromSourceViewController.xib */,
+				A6B10A4A2563B36C00D34DA7 /* TargetDirViewController.h */,
+				A6B10A4B2563B36C00D34DA7 /* TargetDirViewController.m */,
+				A6B10A4C2563B36C00D34DA7 /* TargetDirViewController.xib */,
+				A6B10A4F2563B38700D34DA7 /* ExtractingViewController.h */,
+				A6B10A502563B38700D34DA7 /* ExtractingViewController.m */,
+				A6B10A512563B38700D34DA7 /* ExtractingViewController.xib */,
+				A6B10A562563ED3F00D34DA7 /* AppController.h */,
+				A6B10A572563ED3F00D34DA7 /* AppController.m */,
+				A6B10A592563EE0700D34DA7 /* WizardViewController.h */,
+				A6B10A5F2564149B00D34DA7 /* WizardViewController.m */,
+				A6B10A5C25640C9600D34DA7 /* WizardState.h */,
+				A6B10A5D25640C9600D34DA7 /* WizardState.m */,
 			);
 			path = Caesar3Unpacker;
+			sourceTree = "<group>";
+		};
+		A6B10A6225650CFE00D34DA7 /* unshield */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = unshield;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,6 +193,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6B10A3A2563B21300D34DA7 /* ChooseSourceViewController.xib in Resources */,
+				A6B10A4E2563B36C00D34DA7 /* TargetDirViewController.xib in Resources */,
+				A6B10A3F2563B32F00D34DA7 /* GogSourceViewController.xib in Resources */,
+				A6B10A442563B33E00D34DA7 /* SteamSourceViewController.xib in Resources */,
+				A6B10A492563B34D00D34DA7 /* CdromSourceViewController.xib in Resources */,
+				A6B10A532563B38700D34DA7 /* ExtractingViewController.xib in Resources */,
 				A6B10A262563B10A00D34DA7 /* Assets.xcassets in Resources */,
 				A6B10A292563B10A00D34DA7 /* MainMenu.xib in Resources */,
 			);
@@ -134,8 +211,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6B10A4D2563B36C00D34DA7 /* TargetDirViewController.m in Sources */,
+				A6B10A392563B21300D34DA7 /* ChooseSourceViewController.m in Sources */,
+				A6B10A3E2563B32F00D34DA7 /* GogSourceViewController.m in Sources */,
+				A6B10A602564149C00D34DA7 /* WizardViewController.m in Sources */,
+				A6B10A432563B33E00D34DA7 /* SteamSourceViewController.m in Sources */,
+				A6B10A582563ED3F00D34DA7 /* AppController.m in Sources */,
 				A6B10A2C2563B10A00D34DA7 /* main.m in Sources */,
+				A6B10A522563B38700D34DA7 /* ExtractingViewController.m in Sources */,
 				A6B10A242563B10800D34DA7 /* AppDelegate.m in Sources */,
+				A6B10A5E25640C9600D34DA7 /* WizardState.m in Sources */,
+				A6B10A482563B34D00D34DA7 /* CdromSourceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +360,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.bvschaik.Caesar3Unpacker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -291,6 +378,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.bvschaik.Caesar3Unpacker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
