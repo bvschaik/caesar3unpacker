@@ -11,19 +11,34 @@
 #include "libunshield.h"
 
 @interface CdromExtractor ()
-- (BOOL)extractCabFile:(WizardState *)state;
-- (BOOL)copyFiles:(WizardState *)state;
+- (BOOL)extractCabFile;
+- (BOOL)copyFiles;
 @end
 
 @implementation CdromExtractor
 
-- (void)extract:(WizardState *)state {
-    if ([self extractCabFile:state] && [self copyFiles:state]) {
+- (CdromExtractor *)initWithState:(WizardState *)state {
+    self = [super init];
+    if (self) {
+        self->state = state;
+    }
+    return self;
+}
+
+- (void)extract {
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSError *error;
+    if (![fileManager createDirectoryAtURL:state.targetUrl withIntermediateDirectories:YES attributes:nil error:&error]) {
+        [self.delegate onExtractorError:[NSString stringWithFormat:@"Unable to create directory %@: %@", state.targetUrl.path, error.localizedDescription]];
+        return;
+    }
+
+    if ([self extractCabFile] && [self copyFiles]) {
         [self.delegate onExtractorDone];
     }
 }
 
-- (BOOL)extractCabFile:(WizardState *)state {
+- (BOOL)extractCabFile {
     NSURL *dataCab = [state.sourceUrl URLByAppendingPathComponent:@"data1.cab"];
     if (![[NSFileManager defaultManager] fileExistsAtPath:dataCab.path]) {
         [self.delegate onExtractorError:[NSString stringWithFormat:@"File data1.cab was not found in %@. Please check if you have selected the right folder.", state.sourceUrl]];
@@ -55,13 +70,11 @@
             }
         }
     }
-
     unshield_close(unshield);
-    [self.delegate onExtractorProgress:@"data1.cab exists"];
     return YES;
 }
 
-- (BOOL)copyFiles:(WizardState *)state {
+- (BOOL)copyFiles {
     [self.delegate onExtractorProgress:@"Copying files"];
 
     [self copyDirectory:[state.sourceUrl URLByAppendingPathComponent:@"555"] to:[state.targetUrl URLByAppendingPathComponent:@"555"]];
@@ -89,7 +102,10 @@
     NSArray<NSURL*> *files = [fileManager contentsOfDirectoryAtURL:from includingPropertiesForKeys:nil options:0 error:nil];
     for (NSURL *file in files) {
         [fileManager copyItemAtURL:file toURL:[to URLByAppendingPathComponent:file.lastPathComponent] error:nil];
-        // TODO check for cancellation
+
+        if (state.isCancelled) {
+            break;
+        }
     }
 }
 

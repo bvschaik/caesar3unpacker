@@ -18,13 +18,11 @@
 @implementation ExtractingViewController
 
 - (void)initWizard {
-    CdromExtractor *extractor = [[CdromExtractor alloc] init];
+    CdromExtractor *extractor = [[CdromExtractor alloc] initWithState:self.wizardState];
     extractor.delegate = self;
     self.wizardState.isCancelled = NO;
-    dispatch_queue_t serialQueue = dispatch_queue_create("Extractor", DISPATCH_QUEUE_SERIAL);
-//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-    dispatch_async(serialQueue, ^{
-        [extractor extract:self.wizardState];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        [extractor extract];
     });
 }
 

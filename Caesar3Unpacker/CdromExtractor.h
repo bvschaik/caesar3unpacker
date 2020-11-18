@@ -13,11 +13,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CdromExtractor : NSObject
+@interface CdromExtractor : NSObject {
+    WizardState *state;
+}
 
 @property (weak) id<ExtractorDelegate> delegate;
 
-- (void)extract:(WizardState*)state;
+- (CdromExtractor*)initWithState:(WizardState*)state;
+
+- (void)extract;
 
 @end
 
