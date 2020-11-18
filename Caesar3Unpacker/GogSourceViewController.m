@@ -35,7 +35,7 @@
     [panel setAllowedFileTypes:[NSArray arrayWithObject:@"exe"]];
 
     NSInteger result = [panel runModal];
-    
+
     if (result == NSFileHandlingPanelOKButton) {
         NSURL *url = [panel URL];
         self.wizardState.sourceUrl = url;

@@ -14,6 +14,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CdromSourceViewController : WizardViewController
 
+@property (weak) IBOutlet NSTextField *pathLabel;
+
+- (IBAction)browseForFolder:(id)sender;
+
 @end
 
 NS_ASSUME_NONNULL_END

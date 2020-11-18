@@ -45,7 +45,6 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         self.progressView.string = [self.progressView.string stringByAppendingFormat:@"%@\n", message];
         [self.progressView scrollToEndOfDocument:nil];
-        //[self.progressView scrollToEndOfDocument:nil];
     });
 }
 
