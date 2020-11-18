@@ -22,6 +22,7 @@ typedef enum {
 @property Source sourceId;
 @property NSURL *sourceUrl;
 @property NSURL *targetUrl;
+@property BOOL isCancelled;
 
 @end
 

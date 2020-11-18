@@ -8,11 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 
+#import "ExtractorDelegate.h"
 #import "WizardViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ExtractingViewController : WizardViewController {
+@interface ExtractingViewController : WizardViewController <ExtractorDelegate> {
     BOOL shouldCancel;
 }
 

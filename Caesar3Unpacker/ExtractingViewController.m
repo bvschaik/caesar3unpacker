@@ -7,6 +7,7 @@
 //
 
 #import "ExtractingViewController.h"
+#import "CdromExtractor.h"
 
 #include <dispatch/dispatch.h>
 
@@ -16,20 +17,14 @@
 
 @implementation ExtractingViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self->shouldCancel = NO;
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-       
-        for (int i = 0; i < 10; i++) {
-            if (self->shouldCancel) {
-                [self updateProgressAsync:@"Cancelled!"];
-                break;
-            }
-            [NSThread sleepForTimeInterval:1];
-
-            [self updateProgressAsync:[NSString stringWithFormat:@"Progress: %d", i]];
-        }
+- (void)initWizard {
+    CdromExtractor *extractor = [[CdromExtractor alloc] init];
+    extractor.delegate = self;
+    self.wizardState.isCancelled = NO;
+    dispatch_queue_t serialQueue = dispatch_queue_create("Extractor", DISPATCH_QUEUE_SERIAL);
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+    dispatch_async(serialQueue, ^{
+        [extractor extract:self.wizardState];
     });
 }
 
@@ -38,7 +33,20 @@
 }
 
 - (void)onCancel:(id)sender {
-    self->shouldCancel = YES;
+    self.wizardState.isCancelled = YES;
+}
+
+- (void)onExtractorProgress:(NSString *)message {
+    [self updateProgressAsync:message];
+}
+
+- (void)onExtractorError:(NSString *)message {
+    [self updateProgressAsync:message];
+    [self updateProgressAsync:@"*** ERROR ***"];
+}
+
+- (void)onExtractorDone {
+    [self updateProgressAsync:@"Done!"];
 }
 
 - (void)updateProgressAsync:(NSString *)message {

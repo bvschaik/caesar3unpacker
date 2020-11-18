@@ -26,6 +26,17 @@
 		A6B10A582563ED3F00D34DA7 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B10A572563ED3F00D34DA7 /* AppController.m */; };
 		A6B10A5E25640C9600D34DA7 /* WizardState.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B10A5D25640C9600D34DA7 /* WizardState.m */; };
 		A6B10A602564149C00D34DA7 /* WizardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B10A5F2564149B00D34DA7 /* WizardViewController.m */; };
+		A6EA1A6B256583980068CC37 /* md5c.c in Sources */ = {isa = PBXBuildFile; fileRef = A6EA1A55256583970068CC37 /* md5c.c */; };
+		A6EA1A6C256583980068CC37 /* component.c in Sources */ = {isa = PBXBuildFile; fileRef = A6EA1A56256583970068CC37 /* component.c */; };
+		A6EA1A6E256583980068CC37 /* file.c in Sources */ = {isa = PBXBuildFile; fileRef = A6EA1A58256583970068CC37 /* file.c */; };
+		A6EA1A70256583980068CC37 /* ConvertUTF.c in Sources */ = {isa = PBXBuildFile; fileRef = A6EA1A5B256583970068CC37 /* ConvertUTF.c */; };
+		A6EA1A74256583980068CC37 /* directory.c in Sources */ = {isa = PBXBuildFile; fileRef = A6EA1A60256583970068CC37 /* directory.c */; };
+		A6EA1A75256583980068CC37 /* file_group.c in Sources */ = {isa = PBXBuildFile; fileRef = A6EA1A61256583970068CC37 /* file_group.c */; };
+		A6EA1A76256583980068CC37 /* bswap.c in Sources */ = {isa = PBXBuildFile; fileRef = A6EA1A62256583970068CC37 /* bswap.c */; };
+		A6EA1A77256583980068CC37 /* helper.c in Sources */ = {isa = PBXBuildFile; fileRef = A6EA1A64256583970068CC37 /* helper.c */; };
+		A6EA1A78256583980068CC37 /* log.c in Sources */ = {isa = PBXBuildFile; fileRef = A6EA1A65256583980068CC37 /* log.c */; };
+		A6EA1A79256583980068CC37 /* libunshield.c in Sources */ = {isa = PBXBuildFile; fileRef = A6EA1A68256583980068CC37 /* libunshield.c */; };
+		A6EA1A7C256587A20068CC37 /* CdromExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EA1A7B256587A20068CC37 /* CdromExtractor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +72,27 @@
 		A6B10A5C25640C9600D34DA7 /* WizardState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WizardState.h; sourceTree = "<group>"; };
 		A6B10A5D25640C9600D34DA7 /* WizardState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WizardState.m; sourceTree = "<group>"; };
 		A6B10A5F2564149B00D34DA7 /* WizardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WizardViewController.m; sourceTree = "<group>"; };
+		A6EA1A50256583970068CC37 /* unshield_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unshield_config.h; sourceTree = "<group>"; };
+		A6EA1A53256583970068CC37 /* global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = global.h; sourceTree = "<group>"; };
+		A6EA1A54256583970068CC37 /* md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = md5.h; sourceTree = "<group>"; };
+		A6EA1A55256583970068CC37 /* md5c.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = md5c.c; sourceTree = "<group>"; };
+		A6EA1A56256583970068CC37 /* component.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = component.c; sourceTree = "<group>"; };
+		A6EA1A58256583970068CC37 /* file.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = file.c; sourceTree = "<group>"; };
+		A6EA1A5B256583970068CC37 /* ConvertUTF.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ConvertUTF.c; sourceTree = "<group>"; };
+		A6EA1A5D256583970068CC37 /* ConvertUTF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConvertUTF.h; sourceTree = "<group>"; };
+		A6EA1A60256583970068CC37 /* directory.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = directory.c; sourceTree = "<group>"; };
+		A6EA1A61256583970068CC37 /* file_group.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = file_group.c; sourceTree = "<group>"; };
+		A6EA1A62256583970068CC37 /* bswap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bswap.c; sourceTree = "<group>"; };
+		A6EA1A63256583970068CC37 /* libunshield.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libunshield.h; sourceTree = "<group>"; };
+		A6EA1A64256583970068CC37 /* helper.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = helper.c; sourceTree = "<group>"; };
+		A6EA1A65256583980068CC37 /* log.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = log.c; sourceTree = "<group>"; };
+		A6EA1A66256583980068CC37 /* cabfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cabfile.h; sourceTree = "<group>"; };
+		A6EA1A67256583980068CC37 /* log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = log.h; sourceTree = "<group>"; };
+		A6EA1A68256583980068CC37 /* libunshield.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = libunshield.c; sourceTree = "<group>"; };
+		A6EA1A69256583980068CC37 /* internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = internal.h; sourceTree = "<group>"; };
+		A6EA1A7A256587A20068CC37 /* CdromExtractor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CdromExtractor.h; sourceTree = "<group>"; };
+		A6EA1A7B256587A20068CC37 /* CdromExtractor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CdromExtractor.m; sourceTree = "<group>"; };
+		A6EA1A7D256587E50068CC37 /* ExtractorDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtractorDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +157,9 @@
 				A6B10A5F2564149B00D34DA7 /* WizardViewController.m */,
 				A6B10A5C25640C9600D34DA7 /* WizardState.h */,
 				A6B10A5D25640C9600D34DA7 /* WizardState.m */,
+				A6EA1A7D256587E50068CC37 /* ExtractorDelegate.h */,
+				A6EA1A7A256587A20068CC37 /* CdromExtractor.h */,
+				A6EA1A7B256587A20068CC37 /* CdromExtractor.m */,
 			);
 			path = Caesar3Unpacker;
 			sourceTree = "<group>";
@@ -132,8 +167,42 @@
 		A6B10A6225650CFE00D34DA7 /* unshield */ = {
 			isa = PBXGroup;
 			children = (
+				A6EA1A62256583970068CC37 /* bswap.c */,
+				A6EA1A66256583980068CC37 /* cabfile.h */,
+				A6EA1A56256583970068CC37 /* component.c */,
+				A6EA1A59256583970068CC37 /* convert_utf */,
+				A6EA1A60256583970068CC37 /* directory.c */,
+				A6EA1A61256583970068CC37 /* file_group.c */,
+				A6EA1A58256583970068CC37 /* file.c */,
+				A6EA1A64256583970068CC37 /* helper.c */,
+				A6EA1A69256583980068CC37 /* internal.h */,
+				A6EA1A68256583980068CC37 /* libunshield.c */,
+				A6EA1A63256583970068CC37 /* libunshield.h */,
+				A6EA1A65256583980068CC37 /* log.c */,
+				A6EA1A67256583980068CC37 /* log.h */,
+				A6EA1A51256583970068CC37 /* md5 */,
+				A6EA1A50256583970068CC37 /* unshield_config.h */,
 			);
 			path = unshield;
+			sourceTree = "<group>";
+		};
+		A6EA1A51256583970068CC37 /* md5 */ = {
+			isa = PBXGroup;
+			children = (
+				A6EA1A53256583970068CC37 /* global.h */,
+				A6EA1A54256583970068CC37 /* md5.h */,
+				A6EA1A55256583970068CC37 /* md5c.c */,
+			);
+			path = md5;
+			sourceTree = "<group>";
+		};
+		A6EA1A59256583970068CC37 /* convert_utf */ = {
+			isa = PBXGroup;
+			children = (
+				A6EA1A5B256583970068CC37 /* ConvertUTF.c */,
+				A6EA1A5D256583970068CC37 /* ConvertUTF.h */,
+			);
+			path = convert_utf;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,17 +280,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6EA1A78256583980068CC37 /* log.c in Sources */,
+				A6EA1A79256583980068CC37 /* libunshield.c in Sources */,
+				A6EA1A6B256583980068CC37 /* md5c.c in Sources */,
 				A6B10A4D2563B36C00D34DA7 /* TargetDirViewController.m in Sources */,
 				A6B10A392563B21300D34DA7 /* ChooseSourceViewController.m in Sources */,
 				A6B10A3E2563B32F00D34DA7 /* GogSourceViewController.m in Sources */,
 				A6B10A602564149C00D34DA7 /* WizardViewController.m in Sources */,
+				A6EA1A75256583980068CC37 /* file_group.c in Sources */,
+				A6EA1A7C256587A20068CC37 /* CdromExtractor.m in Sources */,
+				A6EA1A70256583980068CC37 /* ConvertUTF.c in Sources */,
+				A6EA1A76256583980068CC37 /* bswap.c in Sources */,
+				A6EA1A6E256583980068CC37 /* file.c in Sources */,
 				A6B10A432563B33E00D34DA7 /* SteamSourceViewController.m in Sources */,
 				A6B10A582563ED3F00D34DA7 /* AppController.m in Sources */,
+				A6EA1A77256583980068CC37 /* helper.c in Sources */,
 				A6B10A2C2563B10A00D34DA7 /* main.m in Sources */,
 				A6B10A522563B38700D34DA7 /* ExtractingViewController.m in Sources */,
 				A6B10A242563B10800D34DA7 /* AppDelegate.m in Sources */,
 				A6B10A5E25640C9600D34DA7 /* WizardState.m in Sources */,
+				A6EA1A74256583980068CC37 /* directory.c in Sources */,
 				A6B10A482563B34D00D34DA7 /* CdromSourceViewController.m in Sources */,
+				A6EA1A6C256583980068CC37 /* component.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
