@@ -23,12 +23,4 @@
     return @"Select CD-ROM";
 }
 
-- (WizardPage)getNextPage {
-    return WizardTargetDir;
-}
-
-- (WizardPage)getPrevPage {
-    return WizardChooseSource;
-}
-
 @end

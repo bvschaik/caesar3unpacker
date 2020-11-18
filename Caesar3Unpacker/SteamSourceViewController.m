@@ -19,12 +19,12 @@
     // Do view setup here.
 }
 
-- (NSString *)title {
-    return @"Steam";
+- (void)initWizard {
+    [self.delegate setNextButtonState:ButtonHidden];
 }
 
-- (WizardPage)getPrevPage {
-    return WizardChooseSource;
+- (NSString *)title {
+    return @"Steam";
 }
 
 @end

@@ -14,6 +14,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AppController : NSObject <WizardViewDelegate> {
+    WizardPage currentPage;
     WizardState *wizardState;
 }
 

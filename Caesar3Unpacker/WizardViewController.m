@@ -22,12 +22,4 @@
     return @"";
 }
 
-- (WizardPage)getNextPage {
-    return WizardNone;
-}
-
-- (WizardPage)getPrevPage {
-    return WizardNone;
-}
-
 @end

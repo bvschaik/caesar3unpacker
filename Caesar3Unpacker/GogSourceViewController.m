@@ -27,14 +27,6 @@
     return @"Select GOG installer";
 }
 
-- (WizardPage)getNextPage {
-    return WizardTargetDir;
-}
-
-- (WizardPage)getPrevPage {
-    return WizardChooseSource;
-}
-
 - (void)browseForFile:(id)sender {
     NSOpenPanel *panel = [NSOpenPanel openPanel];
     [panel setCanChooseFiles:YES];

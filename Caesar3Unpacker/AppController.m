@@ -17,8 +17,10 @@
 #include "TargetDirViewController.h"
 
 @interface AppController()
-- (void)goToPage:(NSInteger)pageId;
-- (WizardViewController*)createViewController:(NSInteger)pageId;
+- (void)goToPage:(WizardPage)pageId;
+- (WizardPage)getNextPage:(WizardPage)current forState:(WizardState*)state;
+- (WizardPage)getPrevPage:(WizardPage)current forState:(WizardState*)state;
+- (WizardViewController*)createViewController:(WizardPage)pageId;
 @end
 
 @implementation AppController
@@ -43,20 +45,20 @@
 }
 
 - (void)goToNext:(id)sender {
-    NSInteger nextPage = [_wizardViewController getNextPage];
-    if (nextPage) {
+    WizardPage nextPage = [self getNextPage:currentPage forState:wizardState];
+    if (nextPage != WizardNone) {
         [self goToPage:nextPage];
     }
 }
 
 - (void)goBack:(id)sender {
-    NSInteger prevPage = [_wizardViewController getPrevPage];
-    if (prevPage) {
+    WizardPage prevPage = [self getPrevPage:currentPage forState:wizardState];
+    if (prevPage != WizardNone) {
         [self goToPage:prevPage];
     }
 }
 
-- (void)goToPage:(NSInteger)pageId {
+- (void)goToPage:(WizardPage)pageId {
     WizardViewController *controller = [self createViewController:pageId];
     if (controller) {
         [_wizardViewController.view removeFromSuperview];
@@ -64,6 +66,7 @@
         [controller.view setFrame:[_wizardView bounds]];
         [controller.view setAutoresizingMask:NSViewWidthSizable|NSViewHeightSizable];
 
+        currentPage = pageId;
         [self setNextButtonState:ButtonEnabled];
         [self setBackButtonState:ButtonEnabled];
         controller.wizardState = wizardState;
@@ -74,7 +77,46 @@
     }
 }
 
-- (WizardViewController*)createViewController:(NSInteger)pageId {
+- (WizardPage)getNextPage:(WizardPage)current forState:(WizardState*)state {
+    switch (current) {
+        case WizardChooseSource:
+            switch (state.sourceId) {
+                case SourceGog: return WizardGogSource;
+                case SourceSteam: return WizardSteamSource;
+                case SourceCdrom: return WizardCdromSource;
+                default: return WizardNone;
+            }
+        case WizardGogSource:
+        case WizardCdromSource:
+            return WizardTargetDir;
+        case WizardTargetDir:
+            return WizardExtracting;
+        default:
+            return WizardNone;
+    }
+}
+
+- (WizardPage)getPrevPage:(WizardPage)current forState:(WizardState*)state {
+    switch (current) {
+        case WizardGogSource:
+        case WizardSteamSource:
+        case WizardCdromSource:
+            return WizardChooseSource;
+        case WizardTargetDir:
+            switch (state.sourceId) {
+                case SourceGog: return WizardGogSource;
+                case SourceSteam: return WizardSteamSource;
+                case SourceCdrom: return WizardCdromSource;
+                default: return WizardNone;
+            }
+        case WizardExtracting:
+            return WizardTargetDir;
+        default:
+            return WizardNone;
+    }
+}
+
+- (WizardViewController*)createViewController:(WizardPage)pageId {
     switch (pageId) {
         case WizardChooseSource:
             return [[ChooseSourceViewController alloc] initWithNibName:@"ChooseSourceViewController" bundle:nil];

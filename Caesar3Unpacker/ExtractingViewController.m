@@ -37,10 +37,6 @@
     return @"Extracting files";
 }
 
-- (WizardPage)getPrevPage {
-    return WizardTargetDir;
-}
-
 - (void)onCancel:(id)sender {
     self->shouldCancel = YES;
 }

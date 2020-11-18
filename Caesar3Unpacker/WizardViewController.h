@@ -43,8 +43,6 @@ typedef enum {
 
 - (void)initWizard;
 - (NSString *)title;
-- (WizardPage)getNextPage;
-- (WizardPage)getPrevPage;
 
 @end
 

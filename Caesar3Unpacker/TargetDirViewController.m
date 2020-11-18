@@ -23,12 +23,4 @@
     return @"Select target";
 }
 
-- (WizardPage)getNextPage {
-    return WizardExtracting;
-}
-
-- (WizardPage)getPrevPage {
-    return WizardChooseSource; // TODO need to know where we came from...
-}
-
 @end

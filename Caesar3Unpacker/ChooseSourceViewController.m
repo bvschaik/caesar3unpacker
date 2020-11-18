@@ -27,15 +27,6 @@
     return @"Choose source";
 }
 
-- (WizardPage)getNextPage {
-    switch (self.wizardState.sourceId) {
-        case 1: return WizardGogSource;
-        case 2: return WizardSteamSource;
-        case 3: return WizardCdromSource;
-        default: return WizardNone;
-    }
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do view setup here.
