@@ -8,6 +8,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="GogSourceViewController">
             <connections>
+                <outlet property="pathLabel" destination="zqe-1t-eDj" id="eWf-wP-QRt"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -25,7 +26,7 @@
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zqe-1t-eDj">
                     <rect key="frame" x="20" y="23" width="350" height="16"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    <textFieldCell key="cell" lineBreakMode="clipping" title="Path of chosen file" id="GbD-AO-5Fw">
+                    <textFieldCell key="cell" lineBreakMode="truncatingMiddle" placeholderString="Path of chosen file" id="GbD-AO-5Fw">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -33,7 +34,7 @@
                 </textField>
                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dDH-Ye-8w4">
                     <rect key="frame" x="18" y="251" width="444" height="44"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" selectable="YES" title="Download the offline installer from GOG and select it below. The resulting file should be about 300MB." id="Knq-qs-ZON">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -47,6 +48,9 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
+                    <connections>
+                        <action selector="browseForFile:" target="-2" id="IYX-aD-GRO"/>
+                    </connections>
                 </button>
             </subviews>
             <point key="canvasLocation" x="140" y="175.5"/>

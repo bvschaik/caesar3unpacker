@@ -13,12 +13,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AppController : NSObject {
+@interface AppController : NSObject <WizardViewDelegate> {
     WizardState *wizardState;
 }
 
 @property (weak) IBOutlet NSTextField *titleLabel;
 @property (weak) IBOutlet NSView *wizardView;
+@property (weak) IBOutlet NSButton *backButton;
+@property (weak) IBOutlet NSButton *nextButton;
 @property (strong) WizardViewController *wizardViewController;
 
 - (IBAction)goToNext:(id)sender;

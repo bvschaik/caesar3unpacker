@@ -14,6 +14,10 @@
 
 @implementation WizardViewController
 
+- (void)initWizard {
+    // empty method for subclasses
+}
+
 - (NSString *)title {
     return @"";
 }

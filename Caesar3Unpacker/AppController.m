@@ -25,12 +25,21 @@
 
 - (instancetype)init {
     wizardState = [[WizardState alloc] init];
-    NSLog(@"Creating wizard state? %@", wizardState);
     return self;
 }
 
 - (void)awakeFromNib {
     [self goToPage:WizardChooseSource];
+}
+
+- (void)setBackButtonState:(ButtonState)state {
+    self.backButton.hidden = state == ButtonHidden ? YES : NO;
+    self.backButton.enabled = state == ButtonEnabled ? YES : NO;
+}
+
+- (void)setNextButtonState:(ButtonState)state {
+    self.nextButton.hidden = state == ButtonHidden ? YES : NO;
+    self.nextButton.enabled = state == ButtonEnabled ? YES : NO;
 }
 
 - (void)goToNext:(id)sender {
@@ -52,9 +61,14 @@
     if (controller) {
         [_wizardViewController.view removeFromSuperview];
         [_wizardView addSubview:controller.view];
-        controller.wizardState = wizardState;
         [controller.view setFrame:[_wizardView bounds]];
         [controller.view setAutoresizingMask:NSViewWidthSizable|NSViewHeightSizable];
+
+        [self setNextButtonState:ButtonEnabled];
+        [self setBackButtonState:ButtonEnabled];
+        controller.wizardState = wizardState;
+        controller.delegate = self;
+        [controller initWizard];
         _wizardViewController = controller;
         [_titleLabel setStringValue:[controller title]];
     }

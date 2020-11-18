@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GogSourceViewController : WizardViewController
 
+@property (weak) IBOutlet NSTextField *pathLabel;
+
 - (IBAction)browseForFile:(id)sender;
 
 @end

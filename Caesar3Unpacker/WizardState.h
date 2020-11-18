@@ -20,8 +20,8 @@ typedef enum {
 @interface WizardState : NSObject
 
 @property Source sourceId;
-@property NSString *sourcePath;
-@property NSString *targetPath;
+@property NSURL *sourceUrl;
+@property NSURL *targetUrl;
 
 @end
 

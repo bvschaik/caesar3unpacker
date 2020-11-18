@@ -14,6 +14,15 @@
 
 @implementation ChooseSourceViewController
 
+- (void)initWizard {
+    [self.delegate setBackButtonState:ButtonHidden];
+    ButtonState nextState = ButtonDisabled;
+    if (self.wizardState.sourceId) {
+        nextState = ButtonEnabled;
+    }
+    [self.delegate setNextButtonState:nextState];
+}
+
 - (NSString *)title {
     return @"Choose source";
 }
@@ -34,6 +43,7 @@
 
 - (void)selectSource:(id)sender {
     self.wizardState.sourceId = (Source) [sender tag];
+    [self.delegate setNextButtonState:ButtonEnabled];
 }
 
 @end

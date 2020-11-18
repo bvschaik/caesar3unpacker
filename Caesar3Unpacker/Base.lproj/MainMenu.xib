@@ -21,6 +21,8 @@
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <customObject id="sNC-4X-lE6" customClass="AppController">
             <connections>
+                <outlet property="backButton" destination="j0x-Ma-e1A" id="1Fp-v9-N9y"/>
+                <outlet property="nextButton" destination="w69-WY-h3v" id="3fW-U9-sbE"/>
                 <outlet property="titleLabel" destination="oSu-Zf-GEA" id="kaH-8g-6dp"/>
                 <outlet property="wizardView" destination="6y8-36-GWD" id="nEc-XM-3g6"/>
             </connections>

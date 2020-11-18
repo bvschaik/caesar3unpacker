@@ -22,10 +22,26 @@ typedef enum {
     WizardExtracting
 } WizardPage;
 
+typedef enum {
+    ButtonDisabled,
+    ButtonEnabled,
+    ButtonHidden
+} ButtonState;
+
+@protocol WizardViewDelegate
+
+- (void)setBackButtonState:(ButtonState)state;
+- (void)setNextButtonState:(ButtonState)state;
+
+@end
+
+
 @interface WizardViewController : NSViewController
 
 @property (weak) WizardState *wizardState;
+@property (nonatomic,weak) id<WizardViewDelegate> delegate;
 
+- (void)initWizard;
 - (NSString *)title;
 - (WizardPage)getNextPage;
 - (WizardPage)getPrevPage;
