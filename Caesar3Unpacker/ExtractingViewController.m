@@ -18,6 +18,7 @@
 @implementation ExtractingViewController
 
 - (void)initWizard {
+    self.progressView.editable = NO;
     CdromExtractor *extractor = [[CdromExtractor alloc] initWithState:self.wizardState];
     extractor.delegate = self;
     self.wizardState.isCancelled = NO;
@@ -49,7 +50,14 @@
 
 - (void)updateProgressAsync:(NSString *)message {
     dispatch_async(dispatch_get_main_queue(), ^{
-        self.progressView.string = [self.progressView.string stringByAppendingFormat:@"%@\n", message];
+        NSTextStorage *textStorage = self.progressView.textStorage;
+        [textStorage beginEditing];
+        if (textStorage.length > 0) {
+            [textStorage replaceCharactersInRange:NSMakeRange(textStorage.length, 0) withString:@"\n"];
+        }
+        [textStorage replaceCharactersInRange:NSMakeRange(textStorage.length, 0) withString:message];
+        [textStorage endEditing];
+
         [self.progressView scrollToEndOfDocument:nil];
     });
 }
