@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define VERBOSE 1
+#define VERBOSE 0
 
 UnshieldFileGroup* unshield_file_group_new(Header* header, uint32_t offset)/*{{{*/
 {

@@ -30,7 +30,7 @@
 
 #include <zlib.h>
 
-#define VERBOSE 3
+#define VERBOSE 0
 
 #define ror8(x,n)   (((x) >> ((int)(n))) | ((x) << (8 - (int)(n))))
 #define rol8(x,n)   (((x) << ((int)(n))) | ((x) >> (8 - (int)(n))))
