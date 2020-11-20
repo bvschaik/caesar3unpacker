@@ -126,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				A6B10A6225650CFE00D34DA7 /* unshield */,
+				A6EA1A802567A7CE0068CC37 /* viewcontrollers */,
 				A6B10A222563B10800D34DA7 /* AppDelegate.h */,
 				A6B10A232563B10800D34DA7 /* AppDelegate.m */,
 				A6B10A252563B10A00D34DA7 /* Assets.xcassets */,
@@ -133,28 +134,8 @@
 				A6B10A2A2563B10A00D34DA7 /* Info.plist */,
 				A6B10A2B2563B10A00D34DA7 /* main.m */,
 				A6B10A2D2563B10A00D34DA7 /* Caesar3Unpacker.entitlements */,
-				A6B10A362563B21300D34DA7 /* ChooseSourceViewController.h */,
-				A6B10A372563B21300D34DA7 /* ChooseSourceViewController.m */,
-				A6B10A382563B21300D34DA7 /* ChooseSourceViewController.xib */,
-				A6B10A3B2563B32F00D34DA7 /* GogSourceViewController.h */,
-				A6B10A3C2563B32F00D34DA7 /* GogSourceViewController.m */,
-				A6B10A3D2563B32F00D34DA7 /* GogSourceViewController.xib */,
-				A6B10A402563B33E00D34DA7 /* SteamSourceViewController.h */,
-				A6B10A412563B33E00D34DA7 /* SteamSourceViewController.m */,
-				A6B10A422563B33E00D34DA7 /* SteamSourceViewController.xib */,
-				A6B10A452563B34D00D34DA7 /* CdromSourceViewController.h */,
-				A6B10A462563B34D00D34DA7 /* CdromSourceViewController.m */,
-				A6B10A472563B34D00D34DA7 /* CdromSourceViewController.xib */,
-				A6B10A4A2563B36C00D34DA7 /* TargetDirViewController.h */,
-				A6B10A4B2563B36C00D34DA7 /* TargetDirViewController.m */,
-				A6B10A4C2563B36C00D34DA7 /* TargetDirViewController.xib */,
-				A6B10A4F2563B38700D34DA7 /* ExtractingViewController.h */,
-				A6B10A502563B38700D34DA7 /* ExtractingViewController.m */,
-				A6B10A512563B38700D34DA7 /* ExtractingViewController.xib */,
 				A6B10A562563ED3F00D34DA7 /* AppController.h */,
 				A6B10A572563ED3F00D34DA7 /* AppController.m */,
-				A6B10A592563EE0700D34DA7 /* WizardViewController.h */,
-				A6B10A5F2564149B00D34DA7 /* WizardViewController.m */,
 				A6B10A5C25640C9600D34DA7 /* WizardState.h */,
 				A6B10A5D25640C9600D34DA7 /* WizardState.m */,
 				A6EA1A7D256587E50068CC37 /* ExtractorDelegate.h */,
@@ -203,6 +184,33 @@
 				A6EA1A5D256583970068CC37 /* ConvertUTF.h */,
 			);
 			path = convert_utf;
+			sourceTree = "<group>";
+		};
+		A6EA1A802567A7CE0068CC37 /* viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				A6B10A592563EE0700D34DA7 /* WizardViewController.h */,
+				A6B10A5F2564149B00D34DA7 /* WizardViewController.m */,
+				A6B10A362563B21300D34DA7 /* ChooseSourceViewController.h */,
+				A6B10A372563B21300D34DA7 /* ChooseSourceViewController.m */,
+				A6B10A382563B21300D34DA7 /* ChooseSourceViewController.xib */,
+				A6B10A3B2563B32F00D34DA7 /* GogSourceViewController.h */,
+				A6B10A3C2563B32F00D34DA7 /* GogSourceViewController.m */,
+				A6B10A3D2563B32F00D34DA7 /* GogSourceViewController.xib */,
+				A6B10A402563B33E00D34DA7 /* SteamSourceViewController.h */,
+				A6B10A412563B33E00D34DA7 /* SteamSourceViewController.m */,
+				A6B10A422563B33E00D34DA7 /* SteamSourceViewController.xib */,
+				A6B10A452563B34D00D34DA7 /* CdromSourceViewController.h */,
+				A6B10A462563B34D00D34DA7 /* CdromSourceViewController.m */,
+				A6B10A472563B34D00D34DA7 /* CdromSourceViewController.xib */,
+				A6B10A4A2563B36C00D34DA7 /* TargetDirViewController.h */,
+				A6B10A4B2563B36C00D34DA7 /* TargetDirViewController.m */,
+				A6B10A4C2563B36C00D34DA7 /* TargetDirViewController.xib */,
+				A6B10A4F2563B38700D34DA7 /* ExtractingViewController.h */,
+				A6B10A502563B38700D34DA7 /* ExtractingViewController.m */,
+				A6B10A512563B38700D34DA7 /* ExtractingViewController.xib */,
+			);
+			name = viewcontrollers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
