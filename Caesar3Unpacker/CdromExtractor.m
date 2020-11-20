@@ -13,6 +13,7 @@
 @interface CdromExtractor ()
 - (BOOL)extractCabFile;
 - (BOOL)copyFiles;
+- (BOOL)checkForCancel;
 @end
 
 @implementation CdromExtractor
@@ -21,6 +22,7 @@
     self = [super init];
     if (self) {
         self->state = state;
+        self->result = ExtractorError;
     }
     return self;
 }
@@ -30,15 +32,21 @@
     NSError *error;
     if (![fileManager createDirectoryAtURL:state.targetUrl withIntermediateDirectories:YES attributes:nil error:&error]) {
         [self.delegate onExtractorError:[NSString stringWithFormat:@"Unable to create directory %@: %@", state.targetUrl.path, error.localizedDescription]];
+        [self.delegate onExtractorDone:ExtractorError];
         return;
     }
 
-    if ([self extractCabFile] && [self copyFiles]) {
-        [self.delegate onExtractorDone];
+    if ([self extractCabFile] && [self copyFiles] && result != ExtractorCancelled) {
+        result = ExtractorSuccess;
     }
+    [self.delegate onExtractorDone:result];
 }
 
 - (BOOL)extractCabFile {
+    if ([self checkForCancel]) {
+        return NO;
+    }
+
     NSURL *dataCab = [state.sourceUrl URLByAppendingPathComponent:@"data1.cab"];
     if (![[NSFileManager defaultManager] fileExistsAtPath:dataCab.path]) {
         [self.delegate onExtractorError:[NSString stringWithFormat:@"File data1.cab was not found in %@. Please check if you have selected the right folder.", state.sourceUrl]];
@@ -65,48 +73,64 @@
                 [self.delegate onExtractorProgress:[NSString stringWithFormat:@"Failed to extract file %s", filename]];
             }
 
-            if (state.isCancelled) {
+            if ([self checkForCancel]) {
                 break;
             }
         }
     }
     unshield_close(unshield);
-    return YES;
+    return !state.isCancelled;
 }
 
 - (BOOL)copyFiles {
     [self.delegate onExtractorProgress:@"Copying files"];
 
-    [self copyDirectory:[state.sourceUrl URLByAppendingPathComponent:@"555"] to:[state.targetUrl URLByAppendingPathComponent:@"555"]];
-    [self copyDirectory:[state.sourceUrl URLByAppendingPathComponent:@"SMK"] to:[state.targetUrl URLByAppendingPathComponent:@"SMK"]];
+    BOOL success = YES;
+    success &= [self copyDirectory:[state.sourceUrl URLByAppendingPathComponent:@"555"] to:[state.targetUrl URLByAppendingPathComponent:@"555"]];
+    success &= [self copyDirectory:[state.sourceUrl URLByAppendingPathComponent:@"SMK"] to:[state.targetUrl URLByAppendingPathComponent:@"SMK"]];
     NSURL *targetWavs = [state.targetUrl URLByAppendingPathComponent:@"wavs"];
-    [self copyDirectory:[state.sourceUrl URLByAppendingPathComponent:@"wavs"] to:targetWavs];
-    [self copyDirectory:[state.sourceUrl URLByAppendingPathComponent:@"Soundfx"] to:targetWavs];
+    success &= [self copyDirectory:[state.sourceUrl URLByAppendingPathComponent:@"wavs"] to:targetWavs];
+    success &= [self copyDirectory:[state.sourceUrl URLByAppendingPathComponent:@"Soundfx"] to:targetWavs];
 
-    return YES;
+    return success;
 }
 
-- (void)copyDirectory:(NSURL *)from to:(NSURL *)to {
+- (BOOL)copyDirectory:(NSURL *)from to:(NSURL *)to {
+    if ([self checkForCancel]) {
+        return NO;
+    }
+
     NSFileManager *fileManager = [NSFileManager defaultManager];
 
     if (![fileManager fileExistsAtPath:from.path]) {
-        return;
+        [self.delegate onExtractorProgress:[NSString stringWithFormat:@"Expected folder does not exist: %@", from.path]];
+        return YES; // Not a fatal error, some versions don't include all files
     }
 
     NSError *error;
     if (![fileManager createDirectoryAtURL:to withIntermediateDirectories:YES attributes:nil error:&error]) {
-        [self.delegate onExtractorProgress:[NSString stringWithFormat:@"Unable to create directory %@: %@", to.path, error.localizedDescription]];
-        return;
+        [self.delegate onExtractorError:[NSString stringWithFormat:@"Unable to create directory %@: %@", to.path, error.localizedDescription]];
+        return NO;
     }
-    [self.delegate onExtractorProgress:[NSString stringWithFormat:@"Copying folder %@", from.lastPathComponent]];
+
     NSArray<NSURL*> *files = [fileManager contentsOfDirectoryAtURL:from includingPropertiesForKeys:nil options:0 error:nil];
     for (NSURL *file in files) {
         [fileManager copyItemAtURL:file toURL:[to URLByAppendingPathComponent:file.lastPathComponent] error:nil];
+        [self.delegate onExtractorProgress:[NSString stringWithFormat:@"Copying file %@", file.lastPathComponent]];
 
-        if (state.isCancelled) {
+        if ([self checkForCancel]) {
             break;
         }
     }
+    return YES;
+}
+
+- (BOOL)checkForCancel {
+    if (state.isCancelled) {
+        result = ExtractorCancelled;
+        return YES;
+    }
+    return NO;
 }
 
 @end

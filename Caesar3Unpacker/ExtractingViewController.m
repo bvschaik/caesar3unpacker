@@ -12,7 +12,7 @@
 #include <dispatch/dispatch.h>
 
 @interface ExtractingViewController ()
-- (void)updateProgressAsync:(NSString *)message;
+- (void)updateProgressAsync:(NSString *)message isFinished:(BOOL)finished;
 @end
 
 @implementation ExtractingViewController
@@ -22,6 +22,9 @@
     CdromExtractor *extractor = [[CdromExtractor alloc] initWithState:self.wizardState];
     extractor.delegate = self;
     self.wizardState.isCancelled = NO;
+
+    [self.delegate setBackButtonState:ButtonDisabled];
+    [self.delegate setNextButtonState:ButtonDisabled];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
         [extractor extract];
     });
@@ -36,19 +39,30 @@
 }
 
 - (void)onExtractorProgress:(NSString *)message {
-    [self updateProgressAsync:message];
+    [self updateProgressAsync:message isFinished:NO];
 }
 
 - (void)onExtractorError:(NSString *)message {
-    [self updateProgressAsync:message];
-    [self updateProgressAsync:@"*** ERROR ***"];
+    [self updateProgressAsync:message isFinished:NO];
 }
 
-- (void)onExtractorDone {
-    [self updateProgressAsync:@"Done!"];
+- (void)onExtractorDone:(ExtractorState)state {
+    NSString *message;
+    switch (state) {
+        case ExtractorSuccess:
+            message = @"Done!";
+            break;
+        case ExtractorCancelled:
+            message = @"*** CANCELLED ***";
+            break;
+        case ExtractorError:
+            message = @"*** ERROR ***";
+            break;
+    }
+    [self updateProgressAsync:message isFinished:YES];
 }
 
-- (void)updateProgressAsync:(NSString *)message {
+- (void)updateProgressAsync:(NSString *)message isFinished:(BOOL)finished {
     dispatch_async(dispatch_get_main_queue(), ^{
         NSTextStorage *textStorage = self.progressView.textStorage;
         [textStorage beginEditing];
@@ -59,6 +73,11 @@
         [textStorage endEditing];
 
         [self.progressView scrollToEndOfDocument:nil];
+
+        if (finished) {
+            [self.delegate setBackButtonState:ButtonEnabled];
+            [self.delegate setNextButtonState:ButtonEnabled];
+        }
     });
 }
 
