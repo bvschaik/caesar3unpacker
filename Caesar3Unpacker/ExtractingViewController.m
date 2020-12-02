@@ -8,6 +8,7 @@
 
 #import "ExtractingViewController.h"
 #import "CdromExtractor.h"
+#import "GogExtractor.h"
 
 #include <dispatch/dispatch.h>
 
@@ -19,7 +20,15 @@
 
 - (void)initWizard {
     self.progressView.editable = NO;
-    CdromExtractor *extractor = [[CdromExtractor alloc] initWithState:self.wizardState];
+    Extractor *extractor;
+    if (self.wizardState.sourceId == SourceCdrom) {
+        extractor = [[CdromExtractor alloc] initWithState:self.wizardState];
+    } else if (self.wizardState.sourceId == SourceGog) {
+        extractor = [[GogExtractor alloc] initWithState:self.wizardState];
+    } else {
+        [self onExtractorError:@"Unknown source selected"];
+        return;
+    }
     extractor.delegate = self;
     self.wizardState.isCancelled = NO;
 

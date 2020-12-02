@@ -13,33 +13,16 @@
 @interface CdromExtractor ()
 - (BOOL)extractCabFile;
 - (BOOL)copyFiles;
-- (BOOL)checkForCancel;
 @end
 
 @implementation CdromExtractor
 
 - (CdromExtractor *)initWithState:(WizardState *)state {
-    self = [super init];
-    if (self) {
-        self->state = state;
-        self->result = ExtractorError;
-    }
-    return self;
+    return self = [super initWithState:state];
 }
 
-- (void)extract {
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSError *error;
-    if (![fileManager createDirectoryAtURL:state.targetUrl withIntermediateDirectories:YES attributes:nil error:&error]) {
-        [self.delegate onExtractorError:[NSString stringWithFormat:@"Unable to create directory %@: %@", state.targetUrl.path, error.localizedDescription]];
-        [self.delegate onExtractorDone:ExtractorError];
-        return;
-    }
-
-    if ([self extractCabFile] && [self copyFiles] && result != ExtractorCancelled) {
-        result = ExtractorSuccess;
-    }
-    [self.delegate onExtractorDone:result];
+- (BOOL)doExtract {
+    return [self extractCabFile] && [self copyFiles];
 }
 
 - (BOOL)extractCabFile {
@@ -69,7 +52,7 @@
             const char *filename = unshield_file_name(unshield, i);
             [self.delegate onExtractorProgress:[NSString stringWithFormat:@"Extracting file %s", filename]];
             NSURL *path = [state.targetUrl URLByAppendingPathComponent:[NSString stringWithUTF8String:filename]];
-            if (!unshield_file_save(unshield, i, path.fileSystemRepresentation)) {
+            if (![self createDirectoryForFile:path] || !unshield_file_save(unshield, i, path.fileSystemRepresentation)) {
                 [self.delegate onExtractorProgress:[NSString stringWithFormat:@"Failed to extract file %s", filename]];
             }
 
@@ -123,14 +106,6 @@
         }
     }
     return YES;
-}
-
-- (BOOL)checkForCancel {
-    if (state.isCancelled) {
-        result = ExtractorCancelled;
-        return YES;
-    }
-    return NO;
 }
 
 @end

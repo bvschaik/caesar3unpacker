@@ -1,8 +1,8 @@
 //
-//  CdromExtractor.h
+//  GogExtractor.h
 //  Caesar3Unpacker
 //
-//  Created by bianca on 18-11-2020.
+//  Created by bianca on 02-12-2020.
 //  Copyright © 2020 Julius Team. All rights reserved.
 //
 
@@ -12,9 +12,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CdromExtractor : Extractor
+@interface GogExtractor : Extractor
 
-- (CdromExtractor*)initWithState:(WizardState*)state;
+- (GogExtractor*)initWithState:(WizardState*)state;
 
 @end
 
