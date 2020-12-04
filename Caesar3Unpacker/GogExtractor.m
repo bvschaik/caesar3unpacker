@@ -11,7 +11,7 @@
 #include "gogextract/gogextract.h"
 
 @interface GogExtractor ()
-- (BOOL)createIntermediateDirectories;
+
 @end
 
 @implementation GogExtractor
@@ -40,7 +40,7 @@
         [self.delegate onExtractorProgress:[NSString stringWithFormat:@"Extracting file %s", filename]];
         NSURL *path = [state.targetUrl URLByAppendingPathComponent:[NSString stringWithUTF8String:filename]];
         if (![self createDirectoryForFile:path] || !gogextract_save_file(g, i, path.fileSystemRepresentation)) {
-            [self.delegate onExtractorProgress:[NSString stringWithFormat:@"Failed to extract file %s", filename]];
+            [self.delegate onExtractorProgress:[NSString stringWithFormat:@"Failed to extract file %s: %s", filename, gogextract_error()]];
         }
     }
     gogextract_close(g);

@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 @property (strong) IBOutlet NSTextView *progressView;
+@property (strong) IBOutlet NSButton *cancelButton;
 
 - (IBAction)onCancel:(id)sender;
 

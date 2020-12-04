@@ -8,6 +8,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="ExtractingViewController">
             <connections>
+                <outlet property="cancelButton" destination="oiE-6w-dp3" id="zDK-P2-QHM"/>
                 <outlet property="progressView" destination="ziN-kg-CBF" id="KlV-oU-IxO"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
@@ -33,15 +34,15 @@
                     <rect key="frame" x="20" y="61" width="423" height="207"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <clipView key="contentView" ambiguous="YES" drawsBackground="NO" copiesOnScroll="NO" id="Zyo-j4-YMN">
-                        <rect key="frame" x="1" y="1" width="421" height="205"/>
+                        <rect key="frame" x="1" y="1" width="406" height="205"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView ambiguous="YES" importsGraphics="NO" richText="NO" verticallyResizable="YES" findStyle="bar" spellingCorrection="YES" smartInsertDelete="YES" id="ziN-kg-CBF">
-                                <rect key="frame" x="0.0" y="0.0" width="421" height="205"/>
+                                <rect key="frame" x="0.0" y="0.0" width="406" height="205"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                <size key="minSize" width="421" height="205"/>
+                                <size key="minSize" width="406" height="205"/>
                                 <size key="maxSize" width="423" height="10000000"/>
                                 <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             </textView>
@@ -52,7 +53,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                     <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="L98-sQ-Hwv">
-                        <rect key="frame" x="406" y="1" width="16" height="205"/>
+                        <rect key="frame" x="407" y="1" width="15" height="205"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                 </scrollView>
