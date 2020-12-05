@@ -20,6 +20,7 @@
 - (void)goToPage:(WizardPage)pageId;
 - (WizardPage)getNextPage:(WizardPage)current forState:(WizardState*)state;
 - (WizardPage)getPrevPage:(WizardPage)current forState:(WizardState*)state;
+- (BOOL)isFinalPage:(WizardPage)pageId;
 - (WizardViewController*)createViewController:(WizardPage)pageId;
 @end
 
@@ -45,6 +46,10 @@
 }
 
 - (void)goToNext:(id)sender {
+    if ([self isFinalPage:currentPage]) {
+        [[NSApplication sharedApplication] terminate:self];
+        return;
+    }
     WizardPage nextPage = [self getNextPage:currentPage forState:wizardState];
     if (nextPage != WizardNone) {
         [self goToPage:nextPage];
@@ -74,6 +79,9 @@
         [controller initWizard];
         _wizardViewController = controller;
         [_titleLabel setStringValue:[controller title]];
+        if ([self isFinalPage:currentPage]) {
+            _nextButton.title = @"Close";
+        }
     }
 }
 
@@ -114,6 +122,10 @@
         default:
             return WizardNone;
     }
+}
+
+- (BOOL)isFinalPage:(WizardPage)pageId {
+    return pageId == WizardExtracting;
 }
 
 - (WizardViewController*)createViewController:(WizardPage)pageId {

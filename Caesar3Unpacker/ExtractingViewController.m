@@ -85,7 +85,6 @@
 
         if (finished) {
             self.cancelButton.enabled = NO;
-            [self.delegate setBackButtonState:ButtonEnabled];
             [self.delegate setNextButtonState:ButtonEnabled];
         }
     });
