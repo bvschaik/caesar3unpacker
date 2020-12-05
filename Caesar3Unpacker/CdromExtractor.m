@@ -13,6 +13,7 @@
 @interface CdromExtractor ()
 - (BOOL)extractCabFile;
 - (BOOL)copyFiles;
+- (NSURL*)getFile:(NSString*)filename inDirectory:(NSURL*)directory;
 @end
 
 @implementation CdromExtractor
@@ -30,8 +31,8 @@
         return NO;
     }
 
-    NSURL *dataCab = [state.sourceUrl URLByAppendingPathComponent:@"data1.cab"];
-    if (![[NSFileManager defaultManager] fileExistsAtPath:dataCab.path]) {
+    NSURL *dataCab = [self getFile:@"data1.cab" inDirectory:state.sourceUrl];
+    if (!dataCab) {
         [self.delegate onExtractorError:[NSString stringWithFormat:@"File data1.cab was not found in %@. Please check if you have selected the right folder.", state.sourceUrl]];
         return NO;
     }
@@ -69,11 +70,11 @@
     [self.delegate onExtractorProgress:@"Copying files"];
 
     BOOL success = YES;
-    success &= [self copyDirectory:[state.sourceUrl URLByAppendingPathComponent:@"555"] to:[state.targetUrl URLByAppendingPathComponent:@"555"]];
-    success &= [self copyDirectory:[state.sourceUrl URLByAppendingPathComponent:@"SMK"] to:[state.targetUrl URLByAppendingPathComponent:@"SMK"]];
+    success &= [self copyDirectory:[self getFile:@"555" inDirectory:state.sourceUrl] to:[state.targetUrl URLByAppendingPathComponent:@"555"]];
+    success &= [self copyDirectory:[self getFile:@"SMK" inDirectory:state.sourceUrl] to:[state.targetUrl URLByAppendingPathComponent:@"SMK"]];
     NSURL *targetWavs = [state.targetUrl URLByAppendingPathComponent:@"wavs"];
-    success &= [self copyDirectory:[state.sourceUrl URLByAppendingPathComponent:@"wavs"] to:targetWavs];
-    success &= [self copyDirectory:[state.sourceUrl URLByAppendingPathComponent:@"Soundfx"] to:targetWavs];
+    success &= [self copyDirectory:[self getFile:@"wavs" inDirectory:state.sourceUrl] to:targetWavs];
+    success &= [self copyDirectory:[self getFile:@"Soundfx" inDirectory:state.sourceUrl] to:targetWavs];
 
     return success;
 }
@@ -83,12 +84,11 @@
         return NO;
     }
 
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-
-    if (![fileManager fileExistsAtPath:from.path]) {
-        [self.delegate onExtractorProgress:[NSString stringWithFormat:@"Expected folder does not exist: %@", from.path]];
+    if (!from) {
         return YES; // Not a fatal error, some versions don't include all files
     }
+
+    NSFileManager *fileManager = [NSFileManager defaultManager];
 
     NSError *error;
     if (![fileManager createDirectoryAtURL:to withIntermediateDirectories:YES attributes:nil error:&error]) {
@@ -106,6 +106,21 @@
         }
     }
     return YES;
+}
+
+- (NSURL *)getFile:(NSString *)filename inDirectory:(NSURL *)directory {
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSURL *defaultUrl = [directory URLByAppendingPathComponent:filename];
+    if ([fileManager fileExistsAtPath:defaultUrl.path]) {
+        return defaultUrl;
+    }
+    NSArray<NSURL*> *files = [fileManager contentsOfDirectoryAtURL:directory includingPropertiesForKeys:nil options:0 error:nil];
+    for (NSURL *file in files) {
+        if ([filename caseInsensitiveCompare:file.lastPathComponent] == NSOrderedSame) {
+            return file;
+        }
+    }
+    return nil;
 }
 
 @end
