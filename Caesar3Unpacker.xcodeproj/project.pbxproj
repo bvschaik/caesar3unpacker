@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		A63378D525777BC2008DC841 /* GogExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = A63378D425777BC2008DC841 /* GogExtractor.m */; };
 		A63378D825778225008DC841 /* Extractor.m in Sources */ = {isa = PBXBuildFile; fileRef = A63378D725778225008DC841 /* Extractor.m */; };
-		A63378DC25779635008DC841 /* gogextract.c in Sources */ = {isa = PBXBuildFile; fileRef = A63378DB25779635008DC841 /* gogextract.c */; };
+		A668271C257B903400564AA2 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A668271B257B903400564AA2 /* Credits.rtf */; };
 		A6B10A242563B10800D34DA7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B10A232563B10800D34DA7 /* AppDelegate.m */; };
 		A6B10A262563B10A00D34DA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6B10A252563B10A00D34DA7 /* Assets.xcassets */; };
 		A6B10A292563B10A00D34DA7 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6B10A272563B10A00D34DA7 /* MainMenu.xib */; };
@@ -29,23 +29,23 @@
 		A6B10A582563ED3F00D34DA7 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B10A572563ED3F00D34DA7 /* AppController.m */; };
 		A6B10A5E25640C9600D34DA7 /* WizardState.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B10A5D25640C9600D34DA7 /* WizardState.m */; };
 		A6B10A602564149C00D34DA7 /* WizardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B10A5F2564149B00D34DA7 /* WizardViewController.m */; };
-		A6D5190B257969CA00A55AF7 /* gogio.c in Sources */ = {isa = PBXBuildFile; fileRef = A6D518DA257969CA00A55AF7 /* gogio.c */; };
-		A6D5190C257969CA00A55AF7 /* gogexe.c in Sources */ = {isa = PBXBuildFile; fileRef = A6D518DC257969CA00A55AF7 /* gogexe.c */; };
-		A6D5190D257969CA00A55AF7 /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = A6D518DD257969CA00A55AF7 /* sha1.c */; };
-		A6D5190E257969CA00A55AF7 /* gogheader.c in Sources */ = {isa = PBXBuildFile; fileRef = A6D518DE257969CA00A55AF7 /* gogheader.c */; };
-		A6D5190F257969CA00A55AF7 /* gogextract.c in Sources */ = {isa = PBXBuildFile; fileRef = A6D518DF257969CA00A55AF7 /* gogextract.c */; };
-		A6D51910257969CA00A55AF7 /* gogioblock.c in Sources */ = {isa = PBXBuildFile; fileRef = A6D518E0257969CA00A55AF7 /* gogioblock.c */; };
-		A6D51911257969CA00A55AF7 /* crc32.c in Sources */ = {isa = PBXBuildFile; fileRef = A6D518E1257969CA00A55AF7 /* crc32.c */; };
-		A6D51912257969CA00A55AF7 /* gogerror.c in Sources */ = {isa = PBXBuildFile; fileRef = A6D518E4257969CA00A55AF7 /* gogerror.c */; };
-		A6D51913257969CA00A55AF7 /* gogiolzma.c in Sources */ = {isa = PBXBuildFile; fileRef = A6D518E7257969CA00A55AF7 /* gogiolzma.c */; };
-		A6D51914257969CA00A55AF7 /* gogfile.c in Sources */ = {isa = PBXBuildFile; fileRef = A6D518EB257969CA00A55AF7 /* gogfile.c */; };
-		A6D51915257969CA00A55AF7 /* gogiofile.c in Sources */ = {isa = PBXBuildFile; fileRef = A6D518EC257969CA00A55AF7 /* gogiofile.c */; };
-		A6D51916257969CA00A55AF7 /* filter_decoder.c in Sources */ = {isa = PBXBuildFile; fileRef = A6D518EF257969CA00A55AF7 /* filter_decoder.c */; };
-		A6D51917257969CA00A55AF7 /* common.c in Sources */ = {isa = PBXBuildFile; fileRef = A6D518F2257969CA00A55AF7 /* common.c */; };
-		A6D51918257969CA00A55AF7 /* lzma_decoder.c in Sources */ = {isa = PBXBuildFile; fileRef = A6D518F6257969CA00A55AF7 /* lzma_decoder.c */; };
-		A6D51919257969CA00A55AF7 /* lzma2_decoder.c in Sources */ = {isa = PBXBuildFile; fileRef = A6D518F7257969CA00A55AF7 /* lzma2_decoder.c */; };
-		A6D5191A257969CA00A55AF7 /* lz_decoder.c in Sources */ = {isa = PBXBuildFile; fileRef = A6D518F9257969CA00A55AF7 /* lz_decoder.c */; };
-		A6D5191B257969CA00A55AF7 /* filter_common.c in Sources */ = {isa = PBXBuildFile; fileRef = A6D518FD257969CA00A55AF7 /* filter_common.c */; };
+		A6D4B35B257B9BE600F30BA2 /* filter_decoder.c in Sources */ = {isa = PBXBuildFile; fileRef = A6D4B32E257B9BE500F30BA2 /* filter_decoder.c */; };
+		A6D4B35C257B9BE600F30BA2 /* common.c in Sources */ = {isa = PBXBuildFile; fileRef = A6D4B331257B9BE500F30BA2 /* common.c */; };
+		A6D4B35D257B9BE600F30BA2 /* lzma_decoder.c in Sources */ = {isa = PBXBuildFile; fileRef = A6D4B335257B9BE500F30BA2 /* lzma_decoder.c */; };
+		A6D4B35E257B9BE600F30BA2 /* lzma2_decoder.c in Sources */ = {isa = PBXBuildFile; fileRef = A6D4B336257B9BE500F30BA2 /* lzma2_decoder.c */; };
+		A6D4B35F257B9BE600F30BA2 /* lz_decoder.c in Sources */ = {isa = PBXBuildFile; fileRef = A6D4B338257B9BE500F30BA2 /* lz_decoder.c */; };
+		A6D4B360257B9BE600F30BA2 /* filter_common.c in Sources */ = {isa = PBXBuildFile; fileRef = A6D4B33C257B9BE500F30BA2 /* filter_common.c */; };
+		A6D4B361257B9BE600F30BA2 /* gogio.c in Sources */ = {isa = PBXBuildFile; fileRef = A6D4B347257B9BE500F30BA2 /* gogio.c */; };
+		A6D4B362257B9BE600F30BA2 /* gogiolzma.c in Sources */ = {isa = PBXBuildFile; fileRef = A6D4B348257B9BE500F30BA2 /* gogiolzma.c */; };
+		A6D4B363257B9BE600F30BA2 /* gogioblock.c in Sources */ = {isa = PBXBuildFile; fileRef = A6D4B349257B9BE500F30BA2 /* gogioblock.c */; };
+		A6D4B364257B9BE600F30BA2 /* gogheader.c in Sources */ = {isa = PBXBuildFile; fileRef = A6D4B34A257B9BE500F30BA2 /* gogheader.c */; };
+		A6D4B365257B9BE600F30BA2 /* crc32.c in Sources */ = {isa = PBXBuildFile; fileRef = A6D4B34B257B9BE500F30BA2 /* crc32.c */; };
+		A6D4B366257B9BE600F30BA2 /* gogiofile.c in Sources */ = {isa = PBXBuildFile; fileRef = A6D4B34D257B9BE500F30BA2 /* gogiofile.c */; };
+		A6D4B367257B9BE600F30BA2 /* gogfile.c in Sources */ = {isa = PBXBuildFile; fileRef = A6D4B350257B9BE500F30BA2 /* gogfile.c */; };
+		A6D4B368257B9BE600F30BA2 /* gogerror.c in Sources */ = {isa = PBXBuildFile; fileRef = A6D4B353257B9BE600F30BA2 /* gogerror.c */; };
+		A6D4B369257B9BE600F30BA2 /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = A6D4B354257B9BE600F30BA2 /* sha1.c */; };
+		A6D4B36A257B9BE600F30BA2 /* gogextract.c in Sources */ = {isa = PBXBuildFile; fileRef = A6D4B356257B9BE600F30BA2 /* gogextract.c */; };
+		A6D4B36B257B9BE600F30BA2 /* gogexe.c in Sources */ = {isa = PBXBuildFile; fileRef = A6D4B359257B9BE600F30BA2 /* gogexe.c */; };
 		A6EA1A6B256583980068CC37 /* md5c.c in Sources */ = {isa = PBXBuildFile; fileRef = A6EA1A55256583970068CC37 /* md5c.c */; };
 		A6EA1A6C256583980068CC37 /* component.c in Sources */ = {isa = PBXBuildFile; fileRef = A6EA1A56256583970068CC37 /* component.c */; };
 		A6EA1A6E256583980068CC37 /* file.c in Sources */ = {isa = PBXBuildFile; fileRef = A6EA1A58256583970068CC37 /* file.c */; };
@@ -64,8 +64,7 @@
 		A63378D425777BC2008DC841 /* GogExtractor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GogExtractor.m; sourceTree = "<group>"; };
 		A63378D625778225008DC841 /* Extractor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Extractor.h; sourceTree = "<group>"; };
 		A63378D725778225008DC841 /* Extractor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Extractor.m; sourceTree = "<group>"; };
-		A63378DA25779635008DC841 /* gogextract.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gogextract.h; sourceTree = "<group>"; };
-		A63378DB25779635008DC841 /* gogextract.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = gogextract.c; sourceTree = "<group>"; };
+		A668271B257B903400564AA2 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		A6B10A1F2563B10800D34DA7 /* Caesar3Unpacker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Caesar3Unpacker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6B10A222563B10800D34DA7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A6B10A232563B10800D34DA7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -98,52 +97,52 @@
 		A6B10A5C25640C9600D34DA7 /* WizardState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WizardState.h; sourceTree = "<group>"; };
 		A6B10A5D25640C9600D34DA7 /* WizardState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WizardState.m; sourceTree = "<group>"; };
 		A6B10A5F2564149B00D34DA7 /* WizardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WizardViewController.m; sourceTree = "<group>"; };
-		A6D518D8257969CA00A55AF7 /* gogerror.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gogerror.h; sourceTree = "<group>"; };
-		A6D518DA257969CA00A55AF7 /* gogio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gogio.c; sourceTree = "<group>"; };
-		A6D518DB257969CA00A55AF7 /* gogiolzma.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gogiolzma.h; sourceTree = "<group>"; };
-		A6D518DC257969CA00A55AF7 /* gogexe.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gogexe.c; sourceTree = "<group>"; };
-		A6D518DD257969CA00A55AF7 /* sha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha1.c; sourceTree = "<group>"; };
-		A6D518DE257969CA00A55AF7 /* gogheader.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gogheader.c; sourceTree = "<group>"; };
-		A6D518DF257969CA00A55AF7 /* gogextract.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gogextract.c; sourceTree = "<group>"; };
-		A6D518E0257969CA00A55AF7 /* gogioblock.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gogioblock.c; sourceTree = "<group>"; };
-		A6D518E1257969CA00A55AF7 /* crc32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = crc32.c; sourceTree = "<group>"; };
-		A6D518E2257969CA00A55AF7 /* gogiofile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gogiofile.h; sourceTree = "<group>"; };
-		A6D518E3257969CA00A55AF7 /* gogfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gogfile.h; sourceTree = "<group>"; };
-		A6D518E4257969CA00A55AF7 /* gogerror.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gogerror.c; sourceTree = "<group>"; };
-		A6D518E5257969CA00A55AF7 /* gogio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gogio.h; sourceTree = "<group>"; };
-		A6D518E7257969CA00A55AF7 /* gogiolzma.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gogiolzma.c; sourceTree = "<group>"; };
-		A6D518E8257969CA00A55AF7 /* sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha1.h; sourceTree = "<group>"; };
-		A6D518E9257969CA00A55AF7 /* gogexe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gogexe.h; sourceTree = "<group>"; };
-		A6D518EA257969CA00A55AF7 /* crc32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crc32.h; sourceTree = "<group>"; };
-		A6D518EB257969CA00A55AF7 /* gogfile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gogfile.c; sourceTree = "<group>"; };
-		A6D518EC257969CA00A55AF7 /* gogiofile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gogiofile.c; sourceTree = "<group>"; };
-		A6D518EE257969CA00A55AF7 /* lzma.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzma.h; sourceTree = "<group>"; };
-		A6D518EF257969CA00A55AF7 /* filter_decoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = filter_decoder.c; sourceTree = "<group>"; };
-		A6D518F0257969CA00A55AF7 /* tuklib_integer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tuklib_integer.h; sourceTree = "<group>"; };
-		A6D518F1257969CA00A55AF7 /* range_decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = range_decoder.h; sourceTree = "<group>"; };
-		A6D518F2257969CA00A55AF7 /* common.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = common.c; sourceTree = "<group>"; };
-		A6D518F3257969CA00A55AF7 /* filter_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = filter_common.h; sourceTree = "<group>"; };
-		A6D518F4257969CA00A55AF7 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
-		A6D518F5257969CA00A55AF7 /* lzma_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzma_common.h; sourceTree = "<group>"; };
-		A6D518F6257969CA00A55AF7 /* lzma_decoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lzma_decoder.c; sourceTree = "<group>"; };
-		A6D518F7257969CA00A55AF7 /* lzma2_decoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lzma2_decoder.c; sourceTree = "<group>"; };
-		A6D518F8257969CA00A55AF7 /* tuklib_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tuklib_common.h; sourceTree = "<group>"; };
-		A6D518F9257969CA00A55AF7 /* lz_decoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lz_decoder.c; sourceTree = "<group>"; };
-		A6D518FA257969CA00A55AF7 /* sysdefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sysdefs.h; sourceTree = "<group>"; };
-		A6D518FB257969CA00A55AF7 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
-		A6D518FC257969CA00A55AF7 /* filter_decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = filter_decoder.h; sourceTree = "<group>"; };
-		A6D518FD257969CA00A55AF7 /* filter_common.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = filter_common.c; sourceTree = "<group>"; };
-		A6D518FE257969CA00A55AF7 /* range_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = range_common.h; sourceTree = "<group>"; };
-		A6D518FF257969CA00A55AF7 /* lzma2_decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzma2_decoder.h; sourceTree = "<group>"; };
-		A6D51900257969CA00A55AF7 /* lzma_decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzma_decoder.h; sourceTree = "<group>"; };
-		A6D51902257969CA00A55AF7 /* lzma12.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzma12.h; sourceTree = "<group>"; };
-		A6D51903257969CA00A55AF7 /* vli.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vli.h; sourceTree = "<group>"; };
-		A6D51904257969CA00A55AF7 /* filter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = filter.h; sourceTree = "<group>"; };
-		A6D51905257969CA00A55AF7 /* base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base.h; sourceTree = "<group>"; };
-		A6D51906257969CA00A55AF7 /* lz_decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lz_decoder.h; sourceTree = "<group>"; };
-		A6D51907257969CA00A55AF7 /* gogextract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gogextract.h; sourceTree = "<group>"; };
-		A6D51908257969CA00A55AF7 /* gogheader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gogheader.h; sourceTree = "<group>"; };
-		A6D51909257969CA00A55AF7 /* gogioblock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gogioblock.h; sourceTree = "<group>"; };
+		A6D4B32B257B9BE500F30BA2 /* gogioblock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gogioblock.h; sourceTree = "<group>"; };
+		A6D4B32D257B9BE500F30BA2 /* lzma.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzma.h; sourceTree = "<group>"; };
+		A6D4B32E257B9BE500F30BA2 /* filter_decoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = filter_decoder.c; sourceTree = "<group>"; };
+		A6D4B32F257B9BE500F30BA2 /* tuklib_integer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tuklib_integer.h; sourceTree = "<group>"; };
+		A6D4B330257B9BE500F30BA2 /* range_decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = range_decoder.h; sourceTree = "<group>"; };
+		A6D4B331257B9BE500F30BA2 /* common.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = common.c; sourceTree = "<group>"; };
+		A6D4B332257B9BE500F30BA2 /* filter_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = filter_common.h; sourceTree = "<group>"; };
+		A6D4B333257B9BE500F30BA2 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		A6D4B334257B9BE500F30BA2 /* lzma_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzma_common.h; sourceTree = "<group>"; };
+		A6D4B335257B9BE500F30BA2 /* lzma_decoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lzma_decoder.c; sourceTree = "<group>"; };
+		A6D4B336257B9BE500F30BA2 /* lzma2_decoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lzma2_decoder.c; sourceTree = "<group>"; };
+		A6D4B337257B9BE500F30BA2 /* tuklib_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tuklib_common.h; sourceTree = "<group>"; };
+		A6D4B338257B9BE500F30BA2 /* lz_decoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lz_decoder.c; sourceTree = "<group>"; };
+		A6D4B339257B9BE500F30BA2 /* sysdefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sysdefs.h; sourceTree = "<group>"; };
+		A6D4B33A257B9BE500F30BA2 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		A6D4B33B257B9BE500F30BA2 /* filter_decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = filter_decoder.h; sourceTree = "<group>"; };
+		A6D4B33C257B9BE500F30BA2 /* filter_common.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = filter_common.c; sourceTree = "<group>"; };
+		A6D4B33D257B9BE500F30BA2 /* range_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = range_common.h; sourceTree = "<group>"; };
+		A6D4B33E257B9BE500F30BA2 /* lzma2_decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzma2_decoder.h; sourceTree = "<group>"; };
+		A6D4B33F257B9BE500F30BA2 /* lzma_decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzma_decoder.h; sourceTree = "<group>"; };
+		A6D4B341257B9BE500F30BA2 /* lzma12.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzma12.h; sourceTree = "<group>"; };
+		A6D4B342257B9BE500F30BA2 /* vli.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vli.h; sourceTree = "<group>"; };
+		A6D4B343257B9BE500F30BA2 /* filter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = filter.h; sourceTree = "<group>"; };
+		A6D4B344257B9BE500F30BA2 /* base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base.h; sourceTree = "<group>"; };
+		A6D4B345257B9BE500F30BA2 /* lz_decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lz_decoder.h; sourceTree = "<group>"; };
+		A6D4B346257B9BE500F30BA2 /* gogexe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gogexe.h; sourceTree = "<group>"; };
+		A6D4B347257B9BE500F30BA2 /* gogio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gogio.c; sourceTree = "<group>"; };
+		A6D4B348257B9BE500F30BA2 /* gogiolzma.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gogiolzma.c; sourceTree = "<group>"; };
+		A6D4B349257B9BE500F30BA2 /* gogioblock.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gogioblock.c; sourceTree = "<group>"; };
+		A6D4B34A257B9BE500F30BA2 /* gogheader.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gogheader.c; sourceTree = "<group>"; };
+		A6D4B34B257B9BE500F30BA2 /* crc32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = crc32.c; sourceTree = "<group>"; };
+		A6D4B34C257B9BE500F30BA2 /* gogerror.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gogerror.h; sourceTree = "<group>"; };
+		A6D4B34D257B9BE500F30BA2 /* gogiofile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gogiofile.c; sourceTree = "<group>"; };
+		A6D4B34E257B9BE500F30BA2 /* sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha1.h; sourceTree = "<group>"; };
+		A6D4B34F257B9BE500F30BA2 /* crc32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crc32.h; sourceTree = "<group>"; };
+		A6D4B350257B9BE500F30BA2 /* gogfile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gogfile.c; sourceTree = "<group>"; };
+		A6D4B351257B9BE500F30BA2 /* gogiolzma.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gogiolzma.h; sourceTree = "<group>"; };
+		A6D4B352257B9BE600F30BA2 /* gogextract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gogextract.h; sourceTree = "<group>"; };
+		A6D4B353257B9BE600F30BA2 /* gogerror.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gogerror.c; sourceTree = "<group>"; };
+		A6D4B354257B9BE600F30BA2 /* sha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha1.c; sourceTree = "<group>"; };
+		A6D4B355257B9BE600F30BA2 /* gogheader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gogheader.h; sourceTree = "<group>"; };
+		A6D4B356257B9BE600F30BA2 /* gogextract.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gogextract.c; sourceTree = "<group>"; };
+		A6D4B357257B9BE600F30BA2 /* gogiofile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gogiofile.h; sourceTree = "<group>"; };
+		A6D4B358257B9BE600F30BA2 /* gogfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gogfile.h; sourceTree = "<group>"; };
+		A6D4B359257B9BE600F30BA2 /* gogexe.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gogexe.c; sourceTree = "<group>"; };
+		A6D4B35A257B9BE600F30BA2 /* gogio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gogio.h; sourceTree = "<group>"; };
 		A6EA1A50256583970068CC37 /* unshield_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unshield_config.h; sourceTree = "<group>"; };
 		A6EA1A53256583970068CC37 /* global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = global.h; sourceTree = "<group>"; };
 		A6EA1A54256583970068CC37 /* md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = md5.h; sourceTree = "<group>"; };
@@ -181,31 +180,29 @@
 		A63378D925779616008DC841 /* gogextract */ = {
 			isa = PBXGroup;
 			children = (
-				A6D518E1257969CA00A55AF7 /* crc32.c */,
-				A6D518EA257969CA00A55AF7 /* crc32.h */,
-				A6D518E4257969CA00A55AF7 /* gogerror.c */,
-				A6D518D8257969CA00A55AF7 /* gogerror.h */,
-				A6D518DC257969CA00A55AF7 /* gogexe.c */,
-				A6D518E9257969CA00A55AF7 /* gogexe.h */,
-				A6D518DF257969CA00A55AF7 /* gogextract.c */,
-				A6D51907257969CA00A55AF7 /* gogextract.h */,
-				A6D518EB257969CA00A55AF7 /* gogfile.c */,
-				A6D518E3257969CA00A55AF7 /* gogfile.h */,
-				A6D518DE257969CA00A55AF7 /* gogheader.c */,
-				A6D51908257969CA00A55AF7 /* gogheader.h */,
-				A6D518DA257969CA00A55AF7 /* gogio.c */,
-				A6D518E5257969CA00A55AF7 /* gogio.h */,
-				A6D518E0257969CA00A55AF7 /* gogioblock.c */,
-				A6D51909257969CA00A55AF7 /* gogioblock.h */,
-				A6D518EC257969CA00A55AF7 /* gogiofile.c */,
-				A6D518E2257969CA00A55AF7 /* gogiofile.h */,
-				A6D518E7257969CA00A55AF7 /* gogiolzma.c */,
-				A6D518DB257969CA00A55AF7 /* gogiolzma.h */,
-				A6D518ED257969CA00A55AF7 /* lzma */,
-				A6D518DD257969CA00A55AF7 /* sha1.c */,
-				A6D518E8257969CA00A55AF7 /* sha1.h */,
-				A63378DA25779635008DC841 /* gogextract.h */,
-				A63378DB25779635008DC841 /* gogextract.c */,
+				A6D4B34B257B9BE500F30BA2 /* crc32.c */,
+				A6D4B34F257B9BE500F30BA2 /* crc32.h */,
+				A6D4B353257B9BE600F30BA2 /* gogerror.c */,
+				A6D4B34C257B9BE500F30BA2 /* gogerror.h */,
+				A6D4B359257B9BE600F30BA2 /* gogexe.c */,
+				A6D4B346257B9BE500F30BA2 /* gogexe.h */,
+				A6D4B356257B9BE600F30BA2 /* gogextract.c */,
+				A6D4B352257B9BE600F30BA2 /* gogextract.h */,
+				A6D4B350257B9BE500F30BA2 /* gogfile.c */,
+				A6D4B358257B9BE600F30BA2 /* gogfile.h */,
+				A6D4B34A257B9BE500F30BA2 /* gogheader.c */,
+				A6D4B355257B9BE600F30BA2 /* gogheader.h */,
+				A6D4B347257B9BE500F30BA2 /* gogio.c */,
+				A6D4B35A257B9BE600F30BA2 /* gogio.h */,
+				A6D4B349257B9BE500F30BA2 /* gogioblock.c */,
+				A6D4B32B257B9BE500F30BA2 /* gogioblock.h */,
+				A6D4B34D257B9BE500F30BA2 /* gogiofile.c */,
+				A6D4B357257B9BE600F30BA2 /* gogiofile.h */,
+				A6D4B348257B9BE500F30BA2 /* gogiolzma.c */,
+				A6D4B351257B9BE500F30BA2 /* gogiolzma.h */,
+				A6D4B32C257B9BE500F30BA2 /* lzma */,
+				A6D4B354257B9BE600F30BA2 /* sha1.c */,
+				A6D4B34E257B9BE500F30BA2 /* sha1.h */,
 			);
 			path = gogextract;
 			sourceTree = "<group>";
@@ -244,6 +241,7 @@
 				A6B10A572563ED3F00D34DA7 /* AppController.m */,
 				A6B10A5C25640C9600D34DA7 /* WizardState.h */,
 				A6B10A5D25640C9600D34DA7 /* WizardState.m */,
+				A668271B257B903400564AA2 /* Credits.rtf */,
 			);
 			path = Caesar3Unpacker;
 			sourceTree = "<group>";
@@ -270,41 +268,41 @@
 			path = unshield;
 			sourceTree = "<group>";
 		};
-		A6D518ED257969CA00A55AF7 /* lzma */ = {
+		A6D4B32C257B9BE500F30BA2 /* lzma */ = {
 			isa = PBXGroup;
 			children = (
-				A6D518EE257969CA00A55AF7 /* lzma.h */,
-				A6D518EF257969CA00A55AF7 /* filter_decoder.c */,
-				A6D518F0257969CA00A55AF7 /* tuklib_integer.h */,
-				A6D518F1257969CA00A55AF7 /* range_decoder.h */,
-				A6D518F2257969CA00A55AF7 /* common.c */,
-				A6D518F3257969CA00A55AF7 /* filter_common.h */,
-				A6D518F4257969CA00A55AF7 /* config.h */,
-				A6D518F5257969CA00A55AF7 /* lzma_common.h */,
-				A6D518F6257969CA00A55AF7 /* lzma_decoder.c */,
-				A6D518F7257969CA00A55AF7 /* lzma2_decoder.c */,
-				A6D518F8257969CA00A55AF7 /* tuklib_common.h */,
-				A6D518F9257969CA00A55AF7 /* lz_decoder.c */,
-				A6D518FA257969CA00A55AF7 /* sysdefs.h */,
-				A6D518FB257969CA00A55AF7 /* common.h */,
-				A6D518FC257969CA00A55AF7 /* filter_decoder.h */,
-				A6D518FD257969CA00A55AF7 /* filter_common.c */,
-				A6D518FE257969CA00A55AF7 /* range_common.h */,
-				A6D518FF257969CA00A55AF7 /* lzma2_decoder.h */,
-				A6D51900257969CA00A55AF7 /* lzma_decoder.h */,
-				A6D51901257969CA00A55AF7 /* lzma */,
-				A6D51906257969CA00A55AF7 /* lz_decoder.h */,
+				A6D4B32D257B9BE500F30BA2 /* lzma.h */,
+				A6D4B32E257B9BE500F30BA2 /* filter_decoder.c */,
+				A6D4B32F257B9BE500F30BA2 /* tuklib_integer.h */,
+				A6D4B330257B9BE500F30BA2 /* range_decoder.h */,
+				A6D4B331257B9BE500F30BA2 /* common.c */,
+				A6D4B332257B9BE500F30BA2 /* filter_common.h */,
+				A6D4B333257B9BE500F30BA2 /* config.h */,
+				A6D4B334257B9BE500F30BA2 /* lzma_common.h */,
+				A6D4B335257B9BE500F30BA2 /* lzma_decoder.c */,
+				A6D4B336257B9BE500F30BA2 /* lzma2_decoder.c */,
+				A6D4B337257B9BE500F30BA2 /* tuklib_common.h */,
+				A6D4B338257B9BE500F30BA2 /* lz_decoder.c */,
+				A6D4B339257B9BE500F30BA2 /* sysdefs.h */,
+				A6D4B33A257B9BE500F30BA2 /* common.h */,
+				A6D4B33B257B9BE500F30BA2 /* filter_decoder.h */,
+				A6D4B33C257B9BE500F30BA2 /* filter_common.c */,
+				A6D4B33D257B9BE500F30BA2 /* range_common.h */,
+				A6D4B33E257B9BE500F30BA2 /* lzma2_decoder.h */,
+				A6D4B33F257B9BE500F30BA2 /* lzma_decoder.h */,
+				A6D4B340257B9BE500F30BA2 /* lzma */,
+				A6D4B345257B9BE500F30BA2 /* lz_decoder.h */,
 			);
 			path = lzma;
 			sourceTree = "<group>";
 		};
-		A6D51901257969CA00A55AF7 /* lzma */ = {
+		A6D4B340257B9BE500F30BA2 /* lzma */ = {
 			isa = PBXGroup;
 			children = (
-				A6D51902257969CA00A55AF7 /* lzma12.h */,
-				A6D51903257969CA00A55AF7 /* vli.h */,
-				A6D51904257969CA00A55AF7 /* filter.h */,
-				A6D51905257969CA00A55AF7 /* base.h */,
+				A6D4B341257B9BE500F30BA2 /* lzma12.h */,
+				A6D4B342257B9BE500F30BA2 /* vli.h */,
+				A6D4B343257B9BE500F30BA2 /* filter.h */,
+				A6D4B344257B9BE500F30BA2 /* base.h */,
 			);
 			path = lzma;
 			sourceTree = "<group>";
@@ -427,6 +425,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6B10A3A2563B21300D34DA7 /* ChooseSourceViewController.xib in Resources */,
+				A668271C257B903400564AA2 /* Credits.rtf in Resources */,
 				A6B10A4E2563B36C00D34DA7 /* TargetDirViewController.xib in Resources */,
 				A6B10A3F2563B32F00D34DA7 /* GogSourceViewController.xib in Resources */,
 				A6B10A442563B33E00D34DA7 /* SteamSourceViewController.xib in Resources */,
@@ -444,47 +443,46 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6D5191A257969CA00A55AF7 /* lz_decoder.c in Sources */,
-				A6D5190C257969CA00A55AF7 /* gogexe.c in Sources */,
+				A6D4B369257B9BE600F30BA2 /* sha1.c in Sources */,
 				A6EA1A78256583980068CC37 /* log.c in Sources */,
-				A6D5190F257969CA00A55AF7 /* gogextract.c in Sources */,
-				A6D51914257969CA00A55AF7 /* gogfile.c in Sources */,
+				A6D4B366257B9BE600F30BA2 /* gogiofile.c in Sources */,
 				A6EA1A79256583980068CC37 /* libunshield.c in Sources */,
 				A63378D825778225008DC841 /* Extractor.m in Sources */,
+				A6D4B36A257B9BE600F30BA2 /* gogextract.c in Sources */,
 				A6EA1A6B256583980068CC37 /* md5c.c in Sources */,
-				A6D51911257969CA00A55AF7 /* crc32.c in Sources */,
 				A6B10A4D2563B36C00D34DA7 /* TargetDirViewController.m in Sources */,
-				A63378DC25779635008DC841 /* gogextract.c in Sources */,
-				A6D51916257969CA00A55AF7 /* filter_decoder.c in Sources */,
+				A6D4B362257B9BE600F30BA2 /* gogiolzma.c in Sources */,
+				A6D4B367257B9BE600F30BA2 /* gogfile.c in Sources */,
 				A6B10A392563B21300D34DA7 /* ChooseSourceViewController.m in Sources */,
-				A6D5190D257969CA00A55AF7 /* sha1.c in Sources */,
 				A6B10A3E2563B32F00D34DA7 /* GogSourceViewController.m in Sources */,
+				A6D4B368257B9BE600F30BA2 /* gogerror.c in Sources */,
 				A6B10A602564149C00D34DA7 /* WizardViewController.m in Sources */,
 				A6EA1A75256583980068CC37 /* file_group.c in Sources */,
 				A63378D525777BC2008DC841 /* GogExtractor.m in Sources */,
 				A6EA1A7C256587A20068CC37 /* CdromExtractor.m in Sources */,
+				A6D4B363257B9BE600F30BA2 /* gogioblock.c in Sources */,
 				A6EA1A70256583980068CC37 /* ConvertUTF.c in Sources */,
-				A6D51919257969CA00A55AF7 /* lzma2_decoder.c in Sources */,
 				A6EA1A76256583980068CC37 /* bswap.c in Sources */,
 				A6EA1A6E256583980068CC37 /* file.c in Sources */,
 				A6B10A432563B33E00D34DA7 /* SteamSourceViewController.m in Sources */,
 				A6B10A582563ED3F00D34DA7 /* AppController.m in Sources */,
+				A6D4B35B257B9BE600F30BA2 /* filter_decoder.c in Sources */,
 				A6EA1A77256583980068CC37 /* helper.c in Sources */,
-				A6D5190E257969CA00A55AF7 /* gogheader.c in Sources */,
 				A6B10A2C2563B10A00D34DA7 /* main.m in Sources */,
+				A6D4B35E257B9BE600F30BA2 /* lzma2_decoder.c in Sources */,
+				A6D4B361257B9BE600F30BA2 /* gogio.c in Sources */,
 				A6B10A522563B38700D34DA7 /* ExtractingViewController.m in Sources */,
+				A6D4B35D257B9BE600F30BA2 /* lzma_decoder.c in Sources */,
+				A6D4B360257B9BE600F30BA2 /* filter_common.c in Sources */,
+				A6D4B364257B9BE600F30BA2 /* gogheader.c in Sources */,
+				A6D4B35C257B9BE600F30BA2 /* common.c in Sources */,
 				A6B10A242563B10800D34DA7 /* AppDelegate.m in Sources */,
-				A6D5190B257969CA00A55AF7 /* gogio.c in Sources */,
-				A6D5191B257969CA00A55AF7 /* filter_common.c in Sources */,
+				A6D4B35F257B9BE600F30BA2 /* lz_decoder.c in Sources */,
 				A6B10A5E25640C9600D34DA7 /* WizardState.m in Sources */,
-				A6D51915257969CA00A55AF7 /* gogiofile.c in Sources */,
 				A6EA1A74256583980068CC37 /* directory.c in Sources */,
-				A6D51918257969CA00A55AF7 /* lzma_decoder.c in Sources */,
-				A6D51913257969CA00A55AF7 /* gogiolzma.c in Sources */,
-				A6D51917257969CA00A55AF7 /* common.c in Sources */,
+				A6D4B36B257B9BE600F30BA2 /* gogexe.c in Sources */,
 				A6B10A482563B34D00D34DA7 /* CdromSourceViewController.m in Sources */,
-				A6D51912257969CA00A55AF7 /* gogerror.c in Sources */,
-				A6D51910257969CA00A55AF7 /* gogioblock.c in Sources */,
+				A6D4B365257B9BE600F30BA2 /* crc32.c in Sources */,
 				A6EA1A6C256583980068CC37 /* component.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
