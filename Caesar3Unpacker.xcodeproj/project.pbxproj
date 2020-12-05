@@ -231,6 +231,7 @@
 			children = (
 				A63378D925779616008DC841 /* gogextract */,
 				A6B10A6225650CFE00D34DA7 /* unshield */,
+				A6D5191C257B893400A55AF7 /* extractors */,
 				A6EA1A802567A7CE0068CC37 /* viewcontrollers */,
 				A6B10A222563B10800D34DA7 /* AppDelegate.h */,
 				A6B10A232563B10800D34DA7 /* AppDelegate.m */,
@@ -243,13 +244,6 @@
 				A6B10A572563ED3F00D34DA7 /* AppController.m */,
 				A6B10A5C25640C9600D34DA7 /* WizardState.h */,
 				A6B10A5D25640C9600D34DA7 /* WizardState.m */,
-				A63378D625778225008DC841 /* Extractor.h */,
-				A63378D725778225008DC841 /* Extractor.m */,
-				A6EA1A7D256587E50068CC37 /* ExtractorDelegate.h */,
-				A6EA1A7A256587A20068CC37 /* CdromExtractor.h */,
-				A6EA1A7B256587A20068CC37 /* CdromExtractor.m */,
-				A63378D325777BC2008DC841 /* GogExtractor.h */,
-				A63378D425777BC2008DC841 /* GogExtractor.m */,
 			);
 			path = Caesar3Unpacker;
 			sourceTree = "<group>";
@@ -313,6 +307,20 @@
 				A6D51905257969CA00A55AF7 /* base.h */,
 			);
 			path = lzma;
+			sourceTree = "<group>";
+		};
+		A6D5191C257B893400A55AF7 /* extractors */ = {
+			isa = PBXGroup;
+			children = (
+				A63378D625778225008DC841 /* Extractor.h */,
+				A63378D725778225008DC841 /* Extractor.m */,
+				A6EA1A7D256587E50068CC37 /* ExtractorDelegate.h */,
+				A6EA1A7A256587A20068CC37 /* CdromExtractor.h */,
+				A6EA1A7B256587A20068CC37 /* CdromExtractor.m */,
+				A63378D325777BC2008DC841 /* GogExtractor.h */,
+				A63378D425777BC2008DC841 /* GogExtractor.m */,
+			);
+			name = extractors;
 			sourceTree = "<group>";
 		};
 		A6EA1A51256583970068CC37 /* md5 */ = {
