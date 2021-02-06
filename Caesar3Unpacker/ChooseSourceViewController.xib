@@ -17,8 +17,17 @@
             <rect key="frame" x="0.0" y="0.0" width="485" height="299"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ULJ-nB-1Az">
+                    <rect key="frame" x="20" y="259" width="447" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Where did you get Caesar 3?" id="X6R-y2-9TZ">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
                 <button verticalHuggingPriority="750" fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ziw-0Y-NIC">
-                    <rect key="frame" x="21" y="238" width="446" height="18"/>
+                    <rect key="frame" x="21" y="234" width="446" height="18"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="radio" title="GOG" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="Cnv-jd-gji">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -28,17 +37,8 @@
                         <action selector="selectSource:" target="-2" id="Z4c-jE-EO2"/>
                     </connections>
                 </button>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ULJ-nB-1Az">
-                    <rect key="frame" x="20" y="263" width="180" height="16"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" lineBreakMode="clipping" title="Where did you get Caesar 3?" id="X6R-y2-9TZ">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
                 <button verticalHuggingPriority="750" fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="ITV-Pm-bWi">
-                    <rect key="frame" x="21" y="216" width="446" height="18"/>
+                    <rect key="frame" x="21" y="212" width="446" height="18"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="radio" title="Steam" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="mi4-R2-1nj">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -49,7 +49,7 @@
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" fixedFrame="YES" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="b3G-E4-vMF">
-                    <rect key="frame" x="21" y="194" width="446" height="18"/>
+                    <rect key="frame" x="21" y="190" width="446" height="18"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="radio" title="CD-ROM" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="BAF-ea-UvF">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>

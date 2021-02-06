@@ -33,9 +33,9 @@
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dDH-Ye-8w4">
-                    <rect key="frame" x="18" y="251" width="444" height="44"/>
+                    <rect key="frame" x="18" y="243" width="444" height="52"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" selectable="YES" title="Download the offline installer from GOG and select the .exe file. The resulting file should be about 300MB." id="Knq-qs-ZON">
+                    <textFieldCell key="cell" truncatesLastVisibleLine="YES" selectable="YES" title="Download the offline installer from GOG and select the .exe file. The resulting file should be about 300MB." id="Knq-qs-ZON">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -57,6 +57,6 @@
         </customView>
     </objects>
     <resources>
-        <image name="GogOfflineInstaller" width="663" height="477"/>
+        <image name="GogOfflineInstaller" width="662.5" height="477"/>
     </resources>
 </document>
