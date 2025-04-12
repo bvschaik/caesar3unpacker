@@ -138,7 +138,7 @@ static int write_file(io_source *src, FILE *fp, int length, uint8_t expected_che
     return 1;
 }
 
-int gog_file_save(io_source *src, gog_header_data_entry *entry, const char *filepath)
+int gog_file_save(io_source *src, gog_header_data_entry *entry, const char *filepath, int append)
 {
     io_skip(src, entry->chunk_offset);
     uint8_t magic[4];
@@ -157,7 +157,7 @@ int gog_file_save(io_source *src, gog_header_data_entry *entry, const char *file
     if (entry->exe_optimized) {
         file_src = exefilter_io_open(file_src);
     }
-    FILE *fp = fopen(filepath, "wb");
+    FILE *fp = fopen(filepath, append ? "ab" : "wb");
     if (!fp) {
         gog_set_error("Unable to open file '%s' for writing", filepath);
         if (entry->compressed) {

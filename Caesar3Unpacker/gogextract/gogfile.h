@@ -4,6 +4,6 @@
 #include "gogheader.h"
 #include "gogio.h"
 
-int gog_file_save(io_source *src, gog_header_data_entry *entry, const char *filepath);
+int gog_file_save(io_source *src, gog_header_data_entry *entry, const char *filepath, int append);
 
 #endif

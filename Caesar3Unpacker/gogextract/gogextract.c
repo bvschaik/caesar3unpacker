@@ -100,14 +100,20 @@ int gogextract_save_file(gogextract *g, int id, const char *filepath)
     if (id < 0 || id >= g->num_files) {
         return 0;
     }
-    int location = g->info.files[g->file_index[id]].locations[0];
-    if (location < 0 || location >= g->info.num_data_entries) {
-        return 0;
+    gog_header_file_entry *file = &g->info.files[g->file_index[id]];
+    for (int i = 0; i < file->num_locations; i++) {
+        int location = file->locations[i];
+        if (location < 0 || location >= g->info.num_data_entries) {
+            return 0;
+        }
+        gog_header_data_entry *entry = &g->info.data_entries[location];
+        if (!io_set(g->src, g->offsets.data_offset)) {
+            gog_set_error("Cannot seek to %d", g->offsets.data_offset);
+            return 0;
+        }
+        if (!gog_file_save(g->src, entry, filepath, i > 0)) {
+            return 0;
+        }
     }
-    gog_header_data_entry *entry = &g->info.data_entries[location];
-    if (!io_set(g->src, g->offsets.data_offset)) {
-        gog_set_error("Cannot seek to %d", g->offsets.data_offset);
-        return 0;
-    }
-    return gog_file_save(g->src, entry, filepath);
+    return 1;
 }
