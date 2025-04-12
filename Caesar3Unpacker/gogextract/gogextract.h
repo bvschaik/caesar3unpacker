@@ -13,8 +13,6 @@ int gogextract_get_num_files(gogextract *g);
 
 const char *gogextract_get_file_name(gogextract *g, int id);
 
-size_t gogextract_get_file_size(gogextract *g, int id);
-
 int gogextract_save_file(gogextract *g, int id, const char *filepath);
 
 const char *gogextract_error(void);
