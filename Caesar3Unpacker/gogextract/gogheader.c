@@ -36,9 +36,14 @@ static int version_load(io_source *src, gog_header_info *info)
     return 1;
 }
 
+static int version_is(gog_header_info *info, int major, int minor, int patch)
+{
+    return info->version.major == major && info->version.minor == minor && info->version.patch == patch;
+}
+
 static int is_supported_version(gog_header_info *info)
 {
-    if (info->version.major == 5 && info->version.minor == 5 && info->version.patch == 0 && info->version.unicode) {
+    if ((version_is(info, 5, 5, 0) || version_is(info, 5, 6, 2)) && info->version.unicode) {
         return 1;
     }
     return 0;
@@ -166,7 +171,7 @@ static void read_file(io_source *src, gog_header_file_entry *file)
 
 static int read_first_block(io_source *src, gog_header_info *info)
 {
-    int total_strings = 31;
+    int total_strings = version_is(info, 5, 5, 0) ? 31 : 34;
     for (int i = 0; i < total_strings; i++) {
         skip_string(src);
     }
@@ -191,7 +196,11 @@ static int read_first_block(io_source *src, gog_header_info *info)
     skip_windows_version(src);
 
     // Colors
-    io_skip(src, 12);
+    if (version_is(info, 5, 5, 0)) {
+        io_skip(src, 12);
+    } else {
+        io_skip(src, 9);
+    }
 
     // Password stuff
     io_skip(src, 28);
