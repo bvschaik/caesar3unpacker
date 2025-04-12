@@ -111,7 +111,7 @@ int gogextract_save_file(gogextract *g, int id, const char *filepath)
             gog_set_error("Cannot seek to %d", g->offsets.data_offset);
             return 0;
         }
-        if (!gog_file_save(g->src, entry, filepath, i > 0)) {
+        if (!gog_file_save(g->src, entry, filepath, i > 0, file->is_compressed)) {
             return 0;
         }
     }

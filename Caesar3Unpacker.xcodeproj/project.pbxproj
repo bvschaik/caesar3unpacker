@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A61D3C092DAA6AF50024B8EB /* gogiozlib.c in Sources */ = {isa = PBXBuildFile; fileRef = A61D3C082DAA6AF50024B8EB /* gogiozlib.c */; };
 		A63378D525777BC2008DC841 /* GogExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = A63378D425777BC2008DC841 /* GogExtractor.m */; };
 		A63378D825778225008DC841 /* Extractor.m in Sources */ = {isa = PBXBuildFile; fileRef = A63378D725778225008DC841 /* Extractor.m */; };
 		A668271C257B903400564AA2 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A668271B257B903400564AA2 /* Credits.rtf */; };
@@ -60,6 +61,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A61D3C072DAA6AF50024B8EB /* gogiozlib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gogiozlib.h; sourceTree = "<group>"; };
+		A61D3C082DAA6AF50024B8EB /* gogiozlib.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = gogiozlib.c; sourceTree = "<group>"; };
 		A63378D325777BC2008DC841 /* GogExtractor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GogExtractor.h; sourceTree = "<group>"; };
 		A63378D425777BC2008DC841 /* GogExtractor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GogExtractor.m; sourceTree = "<group>"; };
 		A63378D625778225008DC841 /* Extractor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Extractor.h; sourceTree = "<group>"; };
@@ -200,6 +203,8 @@
 				A6D4B357257B9BE600F30BA2 /* gogiofile.h */,
 				A6D4B348257B9BE500F30BA2 /* gogiolzma.c */,
 				A6D4B351257B9BE500F30BA2 /* gogiolzma.h */,
+				A61D3C082DAA6AF50024B8EB /* gogiozlib.c */,
+				A61D3C072DAA6AF50024B8EB /* gogiozlib.h */,
 				A6D4B32C257B9BE500F30BA2 /* lzma */,
 				A6D4B354257B9BE600F30BA2 /* sha1.c */,
 				A6D4B34E257B9BE500F30BA2 /* sha1.h */,
@@ -477,6 +482,7 @@
 				A6D4B364257B9BE600F30BA2 /* gogheader.c in Sources */,
 				A6D4B35C257B9BE600F30BA2 /* common.c in Sources */,
 				A6B10A242563B10800D34DA7 /* AppDelegate.m in Sources */,
+				A61D3C092DAA6AF50024B8EB /* gogiozlib.c in Sources */,
 				A6D4B35F257B9BE600F30BA2 /* lz_decoder.c in Sources */,
 				A6B10A5E25640C9600D34DA7 /* WizardState.m in Sources */,
 				A6EA1A74256583980068CC37 /* directory.c in Sources */,

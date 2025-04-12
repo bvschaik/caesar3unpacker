@@ -2,6 +2,7 @@
 
 #include "gogerror.h"
 #include "gogiolzma.h"
+#include "gogiozlib.h"
 #include "sha1.h"
 
 #include <stdio.h>
@@ -138,7 +139,24 @@ static int write_file(io_source *src, FILE *fp, int length, uint8_t expected_che
     return 1;
 }
 
-int gog_file_save(io_source *src, gog_header_data_entry *entry, const char *filepath, int append)
+static int write_compressed_file(io_source *src, FILE *fp, int length, uint8_t expected_checksum[20])
+{
+    uint8_t buffer[BUFFER_SIZE];
+    uint8_t checksum[20];
+    io_source *zlib = zlib_io_open(length, sha1_io_attach(src, checksum));
+    int bytes_read;
+    while ((bytes_read = io_read_raw(zlib, buffer, BUFFER_SIZE)) != 0) {
+        fwrite(buffer, 1, bytes_read, fp);
+    };
+    io_close(zlib);
+    if (memcmp(checksum, expected_checksum, 20) != 0) {
+        gog_set_error("Checksum mismatch");
+        return 0;
+    }
+    return 1;
+}
+
+int gog_file_save(io_source *src, gog_header_data_entry *entry, const char *filepath, int append, int output_compressed)
 {
     io_skip(src, entry->chunk_offset);
     uint8_t magic[4];
@@ -165,7 +183,9 @@ int gog_file_save(io_source *src, gog_header_data_entry *entry, const char *file
         }
         return 0;
     }
-    int result = write_file(file_src, fp, entry->file_size, entry->sha1_checksum);
+    int result = output_compressed
+        ? write_compressed_file(file_src, fp, entry->file_size, entry->sha1_checksum)
+        : write_file(file_src, fp, entry->file_size, entry->sha1_checksum);
     fclose(fp);
     if (entry->compressed) {
         io_close(file_src);
