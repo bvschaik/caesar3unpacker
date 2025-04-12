@@ -143,6 +143,7 @@ void sha1_finish(sha1_t* context, uint8_t digest[20])
 typedef struct {
     io_source *base;
     sha1_t sha;
+    uint8_t *checksum;
 } sha1_io_data;
 
 static int sha1_read_bytes(void *source_data, void *buffer, int max_size)
@@ -171,24 +172,25 @@ static long sha1_get_pos(void *source_data)
     return base->get_pos(base->data);
 }
 
-io_source *sha1_io_attach(io_source *base)
+static void sha1_close(void *source_data)
+{
+    sha1_io_data *data = (sha1_io_data *) source_data;
+    sha1_finish(&data->sha, data->checksum);
+}
+
+io_source *sha1_io_attach(io_source *base, uint8_t checksum[20])
 {
     io_source *s = io_create(sizeof(sha1_io_data));
     if (s) {
         sha1_io_data *data = (sha1_io_data *) s->data;
         data->base = base;
+        data->checksum = checksum;
         sha1_init(&data->sha);
         s->read_bytes = sha1_read_bytes;
-        s->seek_to = sha1_seek_to;
-        s->get_pos = sha1_get_pos;
+        s->seek_to = base->seek_to ? sha1_seek_to : NULL;
+        s->get_pos = base->get_pos ? sha1_get_pos : NULL;
         s->has_error = sha1_has_error;
+        s->close = sha1_close;
     }
     return s;
-}
-
-void sha1_io_detach(io_source *s, uint8_t checksum[20])
-{
-    sha1_io_data *data = (sha1_io_data *) s->data;
-    sha1_finish(&data->sha, checksum);
-    io_close(s);
 }

@@ -118,7 +118,8 @@ static io_source *exefilter_io_open(io_source *base)
 static int write_file(io_source *src, FILE *fp, int length, uint8_t expected_checksum[20])
 {
     uint8_t buffer[BUFFER_SIZE];
-    io_source *sha = sha1_io_attach(src);
+    uint8_t checksum[20];
+    io_source *sha = sha1_io_attach(src, checksum);
     do {
         int to_read = length < BUFFER_SIZE ? length : BUFFER_SIZE;
         int bytes_read = io_read_raw(sha, buffer, to_read);
@@ -129,8 +130,7 @@ static int write_file(io_source *src, FILE *fp, int length, uint8_t expected_che
         fwrite(buffer, 1, to_read, fp);
         length -= to_read;
     } while (length > 0);
-    uint8_t checksum[20];
-    sha1_io_detach(sha, checksum);
+    io_close(sha);
     if (memcmp(checksum, expected_checksum, 20) != 0) {
         gog_set_error("Checksum mismatch");
         return 0;

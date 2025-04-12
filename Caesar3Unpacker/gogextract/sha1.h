@@ -15,7 +15,6 @@ void sha1_init(sha1_t* context);
 void sha1_update(sha1_t* context, const uint8_t* data, uint32_t len);
 void sha1_finish(sha1_t* context, uint8_t digest[20]);
 
-io_source *sha1_io_attach(io_source *base);
-void sha1_io_detach(io_source *src, uint8_t digest[20]);
+io_source *sha1_io_attach(io_source *base, uint8_t digest[20]);
 
 #endif
