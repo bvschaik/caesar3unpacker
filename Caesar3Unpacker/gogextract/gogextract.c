@@ -100,7 +100,7 @@ size_t gogextract_get_file_size(gogextract *g, int id)
     if (id < 0 || id >= g->num_files) {
         return 0;
     }
-    int location = g->info.files[g->file_index[id]].location;
+    int location = g->info.files[g->file_index[id]].locations[0];
     if (location < 0 || location >= g->info.num_data_entries) {
         return 0;
     }
@@ -112,7 +112,7 @@ int gogextract_save_file(gogextract *g, int id, const char *filepath)
     if (id < 0 || id >= g->num_files) {
         return 0;
     }
-    int location = g->info.files[g->file_index[id]].location;
+    int location = g->info.files[g->file_index[id]].locations[0];
     if (location < 0 || location >= g->info.num_data_entries) {
         return 0;
     }

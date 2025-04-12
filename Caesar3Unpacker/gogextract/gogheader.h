@@ -5,8 +5,10 @@
 
 typedef struct {
     char *filename;
-    uint32_t location;
+    int num_locations;
+    uint32_t locations[10];
     int is_temporary;
+    int is_compressed;
 } gog_header_file_entry;
 
 typedef struct {
