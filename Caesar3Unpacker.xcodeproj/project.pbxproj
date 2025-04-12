@@ -628,7 +628,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.bvschaik.Caesar3Unpacker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -646,7 +646,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.bvschaik.Caesar3Unpacker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
